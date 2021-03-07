@@ -15,14 +15,15 @@ public class PlayerMovement : MonoBehaviour
         _squadrons = FindObjectOfType<Squadrons>();
     }
 
-    private void Start()
-    {
-        _targetSquadron = _squadrons.GetNextSquadron();
-    }
-
     // Update is called once per frame
     void Update()
     {
+        if (!_targetSquadron)
+            _targetSquadron = _squadrons.GetNextSquadron();
+        
+        if (!_targetSquadron)
+            return;
+            
         Vector3 targetPosition = _targetSquadron.transform.position;
         targetPosition.x += _playerRocket.CurrentPositionPercentage * _targetSquadron.Width / 2;
 

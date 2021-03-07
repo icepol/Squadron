@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -29,9 +28,10 @@ public class Squadrons : MonoBehaviour
 
     public void DestroySquadron()
     {
-        Destroy(_enemySquadrons[0].gameObject);
-        
+        EnemySquadron enemySquadron = _enemySquadrons[0];
         _enemySquadrons.RemoveAt(0);
+
+        enemySquadron.Remove();
         
         SpawnIfNeeded();
     }

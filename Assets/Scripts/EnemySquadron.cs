@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography;
 using UnityEngine;
 
 public class EnemySquadron : MonoBehaviour
@@ -43,5 +41,17 @@ public class EnemySquadron : MonoBehaviour
         Destroy(_enemies[enemyOffset].gameObject);
 
         Instantiate(gatePrefab, position, Quaternion.identity, transform);
+    }
+
+    public void Remove()
+    {
+        StartCoroutine(WaitAndRemove());
+    }
+
+    private IEnumerator WaitAndRemove()
+    {
+        yield return new WaitForSeconds(1.5f);
+        
+        Destroy(gameObject);
     }
 }
