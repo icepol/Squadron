@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2989884003540943180
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2989884003540943182}
+  - component: {fileID: 2989884003540943181}
+  - component: {fileID: 2989884003540943183}
+  m_Layer: 0
+  m_Name: Squadrons
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2989884003540943182
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2989884003540943180}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2989884003540943181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2989884003540943180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d23f03e731674971955e9f929771126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minSpawnedSquadrons: 10
+--- !u!114 &2989884003540943183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2989884003540943180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff1ef5eeffcf442b9c67303b857a748, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  squadronPrefabs:
+  - {fileID: 3130597074930415566, guid: 92f3e9b40075540c1934c32537526d27, type: 3}
+  - {fileID: 3130597074930415566, guid: 6091656918f11422abaf1b0fcc828c08, type: 3}
+  - {fileID: 3130597074930415566, guid: 887d52ac1019643138e8bd4bd72ec807, type: 3}
+  startZ: 15
+  offsetZ: 15
+  offsetX: 3
+  rotation: 45
