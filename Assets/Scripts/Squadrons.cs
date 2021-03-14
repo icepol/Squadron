@@ -21,8 +21,10 @@ public class Squadrons : MonoBehaviour
         SpawnIfNeeded();
     }
 
-    public EnemySquadron GetNextSquadron()
+    public EnemySquadron GetFollowingSquadron()
     {
+        _enemySquadrons[0].IsFollowing = true;
+        
         return _enemySquadrons[0];
     }
 

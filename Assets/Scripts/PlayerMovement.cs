@@ -1,3 +1,4 @@
+using pixelook;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -35,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
 
     private EnemySquadron GetNextSquadron()
     {
-        _targetSquadron = _squadrons.GetNextSquadron();
+        _targetSquadron = _squadrons.GetFollowingSquadron();
 
         _currentRotationTime = 0;
         _timeToRotate = Vector3.Distance(transform.position, _targetSquadron.transform.position) / maxDistanceDelta *
@@ -73,5 +74,7 @@ public class PlayerMovement : MonoBehaviour
         _currentRotationTime += Time.deltaTime;
 
         transform.rotation = Quaternion.Lerp(_sourceRotation, _targetRotation, _currentRotationTime / _timeToRotate);
+        
+        EventManager.TriggerEvent(Events.PLAYER_ROTATION_CHANGED, transform.rotation.eulerAngles);
     }
 }

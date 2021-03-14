@@ -6,8 +6,23 @@ public class EnemySquadron : MonoBehaviour
     [SerializeField] private Gate gatePrefab; 
     
     private Enemy[] _enemies;
+    private Gate _gate;
+    
+    private bool _isFollowing;
     
     public float Width { get; private set; }
+
+    public bool IsFollowing
+    {
+        get => _isFollowing;
+        
+        set
+        {
+            _isFollowing = value;
+            
+            _gate.IsFollowing = _isFollowing;
+        }
+    }
 
     private void Start()
     {
@@ -40,7 +55,7 @@ public class EnemySquadron : MonoBehaviour
         
         Destroy(_enemies[enemyOffset].gameObject);
 
-        Instantiate(gatePrefab, position, Quaternion.identity, transform);
+        _gate = Instantiate(gatePrefab, position, Quaternion.identity, transform);
     }
 
     public void Remove()
