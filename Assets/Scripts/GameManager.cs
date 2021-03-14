@@ -18,7 +18,6 @@ public class GameManager : MonoBehaviour
 
     private void OnEnable()
     {
-        EventManager.AddListener(Events.PLAYER_JUMP_STARTED, OnPlayerJumpStarted);
         EventManager.AddListener(Events.GAME_STARTED, OnGameStarted);
         EventManager.AddListener(Events.LEVEL_CHANGED, OnLevelChanged);
         EventManager.AddListener(Events.PLAYER_DIED, OnPlayerDied);
@@ -33,7 +32,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     private void OnDisable()
     {
-        EventManager.RemoveListener(Events.PLAYER_JUMP_STARTED, OnPlayerJumpStarted);
         EventManager.RemoveListener(Events.GAME_STARTED, OnGameStarted);
         EventManager.RemoveListener(Events.LEVEL_CHANGED, OnLevelChanged);
         EventManager.RemoveListener(Events.PLAYER_DIED, OnPlayerDied);

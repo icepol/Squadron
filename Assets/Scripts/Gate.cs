@@ -1,3 +1,4 @@
+using pixelook;
 using UnityEngine;
 
 public class Gate : MonoBehaviour, ICollisionHandler
@@ -10,6 +11,8 @@ public class Gate : MonoBehaviour, ICollisionHandler
         
         if (player == null) return;
 
+        EventManager.TriggerEvent(Events.GATE_PASSED);
+        
         Instantiate(gatePass, transform.position, Quaternion.identity);
         
         Destroy(gameObject);

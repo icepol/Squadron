@@ -46,7 +46,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.23584908, g: 0.22583662, b: 0.22583662, a: 0}
+  m_BackGroundColor: {r: 0.21698111, g: 0.21595761, b: 0.21595761, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -337,7 +337,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxDistanceDelta: 10
-  maxDegreesDelta: 0.5
 --- !u!114 &34755044088947117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -777,12 +776,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3092772409323581541, guid: b2b7d58ddfe7f478f907a2a3318bf0d2, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3092772409323581541, guid: b2b7d58ddfe7f478f907a2a3318bf0d2, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3092772409323581541, guid: b2b7d58ddfe7f478f907a2a3318bf0d2, type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3092772409323581541, guid: b2b7d58ddfe7f478f907a2a3318bf0d2, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2b7d58ddfe7f478f907a2a3318bf0d2, type: 3}
