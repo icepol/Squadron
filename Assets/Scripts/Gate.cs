@@ -27,7 +27,12 @@ public class Gate : MonoBehaviour, ICollisionHandler
         
         IsFollowing = false;
     }
-
+    
+    private void OnEnable()
+    {
+        EventManager.AddListener(Events.PLAYER_ROTATION_CHANGED, OnPlayerRotationChanged);
+    }
+    
     public void OnTriggerEnter(Collider other)
     {
         Player player = other.GetComponentInParent<Player>();
@@ -39,5 +44,15 @@ public class Gate : MonoBehaviour, ICollisionHandler
         Instantiate(gatePass, transform.position, Quaternion.identity);
         
         Destroy(gameObject);
+    }
+    
+    private void OnDisable()
+    {
+        EventManager.RemoveListener(Events.PLAYER_ROTATION_CHANGED, OnPlayerRotationChanged);
+    }
+    
+    private void OnPlayerRotationChanged(Vector3 rotation)
+    {
+        transform.rotation = Quaternion.Euler(0, 0, rotation.z);
     }
 }

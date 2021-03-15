@@ -24,7 +24,7 @@ public class EnemySquadron : MonoBehaviour
         }
     }
 
-    private void Start()
+    private void Awake()
     {
         _enemies = GetComponentsInChildren<Enemy>();
         
