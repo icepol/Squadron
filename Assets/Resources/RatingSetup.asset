@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2144cf81dca04412b9909e5a3cd85a8d, type: 3}
+  m_Name: RatingSetup
+  m_EditorClassIdentifier: 
+  attemptsCount: 1
+  finishedGames: 2
+  isRated: 0
+  finishedGamesToShow: 5
+  maxAttemptsCount: 3
+  isProduction: 1

@@ -2,8 +2,6 @@
 {
     public static class Events
     {
-        public const string GATE_PASSED = "GatePassed";
-        
         public const string SKIN_LEFT_BUTTON_CLICK = "SkinLeftButtonClick";
         public const string SKIN_RIGHT_BUTTON_CLICK = "SkinRightButtonClick";
 
@@ -14,6 +12,7 @@
 
         public const string PLAYER_DIED = "PlayerDied";
         public const string PLAYER_COLLIDED_OBSTACLE = "PlayerCollidedObstacle";
+        public const string PLAYER_GATE_PASSED = "PlayerGatePassed";
         public const string PLAYER_ROTATION_CHANGED = "PlayerRotationChange";
         public const string PLAYER_SKIN_CHANGED = "PlayerSkinChanged";
 

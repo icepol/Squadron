@@ -39,9 +39,11 @@ public class Gate : MonoBehaviour, ICollisionHandler
         
         if (player == null) return;
 
-        EventManager.TriggerEvent(Events.GATE_PASSED);
+        EventManager.TriggerEvent(Events.PLAYER_GATE_PASSED);
         
         Instantiate(gatePass, transform.position, Quaternion.identity);
+
+        GameState.Score++;
         
         Destroy(gameObject);
     }

@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c045b178ee8947478c5b2ea0816f8d8, type: 3}
+  m_Name: PlayerCollidedObstacle
+  m_EditorClassIdentifier: 
+  gameObject: {fileID: 306484354556389831, guid: a81c872b616654ed18184bea2dd2a83f, type: 3}
+  count: 1

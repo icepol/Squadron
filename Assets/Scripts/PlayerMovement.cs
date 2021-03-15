@@ -1,3 +1,4 @@
+using System;
 using pixelook;
 using UnityEngine;
 
@@ -5,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float maxDistanceDelta = 10f;
 
+    private bool _isGameRunning;
     private PlayerRocket _playerRocket;
     private Squadrons _squadrons;
     private EnemySquadron _targetSquadron;
@@ -20,8 +22,15 @@ public class PlayerMovement : MonoBehaviour
         _squadrons = FindObjectOfType<Squadrons>();
     }
 
+    private void OnEnable()
+    {
+        EventManager.AddListener(Events.GAME_STARTED, OnGameStarted);
+    }
+
     void Update()
     {
+        if (!_isGameRunning) return;
+        
         if (!_targetSquadron)
             _targetSquadron = GetNextSquadron();
 
@@ -32,6 +41,16 @@ public class PlayerMovement : MonoBehaviour
         RotateToPosition();
 
         CheckTargetPosition();
+    }
+
+    private void OnDisable()
+    {
+        EventManager.RemoveListener(Events.GAME_STARTED, OnGameStarted);
+    }
+
+    private void OnGameStarted()
+    {
+        _isGameRunning = true;
     }
 
     private EnemySquadron GetNextSquadron()

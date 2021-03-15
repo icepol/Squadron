@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c045b178ee8947478c5b2ea0816f8d8, type: 3}
+  m_Name: Fireworks
+  m_EditorClassIdentifier: 
+  gameObject: {fileID: 8365682012018461872, guid: fdd9aaaa11c7e435e93809a071b380d5, type: 3}
+  count: 1

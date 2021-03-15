@@ -1,13 +1,17 @@
 using System.Collections;
+using GameAnalyticsSDK;
 using pixelook;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] GameSetup gameSetup;
+    
     private bool _isGameRunning;
 
     public static GameManager Instance { get; private set; }
+    public GameSetup GameSetup => gameSetup;
 
     private void Awake()
     {
@@ -25,8 +29,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        // GameAnalytics.Initialize();
-        // GameServices.Initialize();
+        GameAnalytics.Initialize();
+        GameServices.Initialize();
     }
 
     // Update is called once per frame
@@ -48,7 +52,7 @@ public class GameManager : MonoBehaviour
 
     private void OnGameStarted()
     {
-        // GameState.Reset();
+        GameState.Reset();
     }
 
     private void OnLevelChanged()
