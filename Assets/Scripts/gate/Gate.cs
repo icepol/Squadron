@@ -7,8 +7,9 @@ public class Gate : MonoBehaviour, ICollisionHandler
     [SerializeField] private ParticleSystem gatePass;
 
     private GateBorders _gateBorders;
+    private Player _player;
     private bool _isFollowing;
-    
+
     public bool IsFollowing
     {
         get => _isFollowing;
@@ -24,6 +25,7 @@ public class Gate : MonoBehaviour, ICollisionHandler
     private void Awake()
     {
         _gateBorders = GetComponentInChildren<GateBorders>();
+        _player = FindObjectOfType<Player>();
         
         IsFollowing = false;
     }
@@ -32,7 +34,13 @@ public class Gate : MonoBehaviour, ICollisionHandler
     {
         EventManager.AddListener(Events.PLAYER_ROTATION_CHANGED, OnPlayerRotationChanged);
     }
-    
+
+    private void Start()
+    {
+        if (_player != null)
+            transform.rotation = Quaternion.Euler(0, 0, _player.transform.rotation.z);
+    }
+
     public void OnTriggerEnter(Collider other)
     {
         Player player = other.GetComponentInParent<Player>();
