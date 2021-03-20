@@ -2,8 +2,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using pixelook;
 
-public class PigSkins : MonoBehaviour
+public class Skins : MonoBehaviour
 {
+    [SerializeField] private float xOffset = 1f;
+    [SerializeField] private float yOffset = 1f;
+    
     [SerializeField] private Skin skinPrefab;
 
     private List<Skin> _skinInstances;
@@ -92,8 +95,8 @@ public class PigSkins : MonoBehaviour
     private Vector3 GetSkinPosition(int skinRelativePosition)
     {
         return new Vector3(
-            skinRelativePosition * 1.25f,
+            skinRelativePosition * xOffset,
             0,
-            Mathf.Abs(skinRelativePosition * 1.75f));
+            Mathf.Abs(skinRelativePosition * yOffset));
     }
 }

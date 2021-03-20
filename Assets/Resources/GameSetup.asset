@@ -14,7 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedSkinIndex: 0
   areUnlockedAll: 0
-  skins: []
+  skins:
+  - {fileID: 11400000, guid: 3e02e395bd84a45108eb9f51650186f9, type: 2}
+  - {fileID: 11400000, guid: b67ce1e7a5f9444cc8e74c0372239af0, type: 2}
+  - {fileID: 11400000, guid: a0d60e3c59fb2432d8d5cfd538aef50e, type: 2}
+  - {fileID: 11400000, guid: 944e53d73511e48b2a44d0ac83943eea, type: 2}
+  - {fileID: 11400000, guid: 4f2eff16a83794349aa8b006cfe45204, type: 2}
   floorVisibleRowsCount: 30
   floorMinRowsCountToSpawnObstacles: 5
   floorMinRowsCountToSpawnCollectibles: 5
@@ -22,4 +27,4 @@ MonoBehaviour:
   rowDelayBeforeFalling: 1
   cameraBackgroundColors: []
   levels: []
-  isProduction: 0
+  isProduction: 1
