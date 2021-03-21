@@ -95,5 +95,6 @@ public class PlayerMovement : MonoBehaviour
         transform.rotation = Quaternion.Lerp(_sourceRotation, _targetRotation, _currentRotationTime / _timeToRotate);
         
         EventManager.TriggerEvent(Events.PLAYER_ROTATION_CHANGED, transform.rotation.eulerAngles);
+        EventManager.TriggerEvent(Events.PLAYER_POSITION_CHANGED, transform.position);
     }
 }

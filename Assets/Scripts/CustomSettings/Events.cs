@@ -14,6 +14,7 @@
         public const string PLAYER_COLLIDED_OBSTACLE = "PlayerCollidedObstacle";
         public const string PLAYER_GATE_PASSED = "PlayerGatePassed";
         public const string PLAYER_ROTATION_CHANGED = "PlayerRotationChange";
+        public const string PLAYER_POSITION_CHANGED = "PlayerPositionChange";
         public const string PLAYER_SKIN_CHANGED = "PlayerSkinChanged";
 
         // camera events

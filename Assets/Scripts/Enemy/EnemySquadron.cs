@@ -6,6 +6,9 @@ public class EnemySquadron : MonoBehaviour
     [SerializeField] private Gate gatePrefab; 
     
     private Enemy[] _enemies;
+    private Mine[] _mines;
+    private IFollowing[] _followings;
+    
     private Gate _gate;
     
     private bool _isFollowing;
@@ -19,14 +22,19 @@ public class EnemySquadron : MonoBehaviour
         set
         {
             _isFollowing = value;
-            
-            _gate.IsFollowing = _isFollowing;
+
+            foreach (IFollowing following in _followings)
+            {
+                following.IsFollowing = _isFollowing;
+            }
         }
     }
 
     private void Awake()
     {
         _enemies = GetComponentsInChildren<Enemy>();
+        _mines = GetComponentsInChildren<Mine>();
+        _followings = GetComponentsInChildren<IFollowing>();
         
         CalculateWidth();
         AddGate();
@@ -50,10 +58,10 @@ public class EnemySquadron : MonoBehaviour
 
     private void AddGate()
     {
-        int enemyOffset = Random.Range(0, _enemies.Length);
+        int enemyOffset = Random.Range(0, _mines.Length);
         Vector3 position = _enemies[enemyOffset].transform.position;
         
-        Destroy(_enemies[enemyOffset].gameObject);
+        Destroy(_mines[enemyOffset].gameObject);
 
         _gate = Instantiate(gatePrefab, position, Quaternion.identity, transform);
     }
