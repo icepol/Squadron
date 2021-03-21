@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7762477687507695669}
   - component: {fileID: 7762477687507695670}
   m_Layer: 0
-  m_Name: PigSkins
+  m_Name: Skins
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,4 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ccf147c318b24bf98e3bbc86a115aa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  xOffset: 2.5
+  yOffset: 3.5
   skinPrefab: {fileID: 2720019180938124170, guid: a16e8acda58a64622be4cc742a746512, type: 3}
