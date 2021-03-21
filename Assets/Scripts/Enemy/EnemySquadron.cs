@@ -8,9 +8,7 @@ public class EnemySquadron : MonoBehaviour
     private Enemy[] _enemies;
     private Mine[] _mines;
     private IFollowing[] _followings;
-    
-    private Gate _gate;
-    
+
     private bool _isFollowing;
     
     public float Width { get; private set; }
@@ -34,10 +32,11 @@ public class EnemySquadron : MonoBehaviour
     {
         _enemies = GetComponentsInChildren<Enemy>();
         _mines = GetComponentsInChildren<Mine>();
-        _followings = GetComponentsInChildren<IFollowing>();
         
         CalculateWidth();
         AddGate();
+        
+        _followings = GetComponentsInChildren<IFollowing>();
     }
 
     private void CalculateWidth()
@@ -63,7 +62,7 @@ public class EnemySquadron : MonoBehaviour
         
         Destroy(_mines[enemyOffset].gameObject);
 
-        _gate = Instantiate(gatePrefab, position, Quaternion.identity, transform);
+        Instantiate(gatePrefab, position, Quaternion.identity, transform);
     }
 
     public void Remove()
