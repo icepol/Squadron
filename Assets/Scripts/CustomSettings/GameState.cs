@@ -21,9 +21,18 @@
         public static int Distance { get; set; }
 
         public static int ComboMultiplier { get; set; }
+        
+        public static int SpawnedSquadronsCount { get; set; }
 
-        public static void Reset()
+        public static void OnApplicationStarted()
         {
+            // reset the state before creating the level
+            SpawnedSquadronsCount = 0;
+        }
+        
+        public static void OnGameStarted()
+        {
+            // reset the state before the game started
             _score = 0;
             Distance = 0;
             ComboMultiplier = 0;

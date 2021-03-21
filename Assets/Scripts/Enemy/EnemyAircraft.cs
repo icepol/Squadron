@@ -9,6 +9,8 @@ public class EnemyAircraft : MonoBehaviour, IFollowing
 
     [SerializeField] private bool isTriggeredByDistance;
     [SerializeField] private float triggerDistance;
+    [SerializeField] private float stopChasingAtDistance;
+    
     [SerializeField] private bool isTriggeredWhenFollowing;
 
     [SerializeField] private float chaseSpeed = 1;
@@ -57,7 +59,10 @@ public class EnemyAircraft : MonoBehaviour, IFollowing
     {
         if (_isTriggered && !chaseConstantly) return;
         
-        _targetPosition = playerPosition;
+        // enemy will fly away if player already passed the enemy 
+        _targetPosition = transform.position.z - playerPosition.z > stopChasingAtDistance
+            ? playerPosition
+            : new Vector3(transform.position.x, transform.position.y, 0);
 
         if (!_isTriggered && isTriggeredByDistance && Vector3.Distance(transform.position, _targetPosition) < triggerDistance)
             TriggerChasing();
@@ -67,13 +72,14 @@ public class EnemyAircraft : MonoBehaviour, IFollowing
     {
         _isTriggered = true;
         
-        engineDust.Play();
+        if (engineDust != null)
+            engineDust.Play();
     }
 
     void ChasePlayer()
     {
         if (!_isTriggered) return;
 
-        transform.position = Vector3.MoveTowards(transform.position, _targetPosition, chaseSpeed);
+        transform.position = Vector3.MoveTowards(transform.position, _targetPosition, chaseSpeed * Time.deltaTime);
     }
 }

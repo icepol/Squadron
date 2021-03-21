@@ -1,12 +1,13 @@
 using System.Collections;
+using System.Collections.Generic;
+using pixelook;
 using UnityEngine;
 
 public class EnemySquadron : MonoBehaviour
 {
     [SerializeField] private Gate gatePrefab; 
     
-    private Enemy[] _enemies;
-    private Mine[] _mines;
+    private List<Enemy> _enemies;
     private IFollowing[] _followings;
 
     private bool _isFollowing;
@@ -30,11 +31,11 @@ public class EnemySquadron : MonoBehaviour
 
     private void Awake()
     {
-        _enemies = GetComponentsInChildren<Enemy>();
-        _mines = GetComponentsInChildren<Mine>();
-        
+        _enemies = new List<Enemy>(GetComponentsInChildren<Enemy>());
+
         CalculateWidth();
         AddGate();
+        AddEnemy();
         
         _followings = GetComponentsInChildren<IFollowing>();
     }
@@ -57,12 +58,35 @@ public class EnemySquadron : MonoBehaviour
 
     private void AddGate()
     {
-        int enemyOffset = Random.Range(0, _mines.Length);
+        int enemyOffset = Random.Range(0, _enemies.Count);
         Vector3 position = _enemies[enemyOffset].transform.position;
         
-        Destroy(_mines[enemyOffset].gameObject);
-
+        Destroy(_enemies[enemyOffset].gameObject);
+        _enemies.RemoveAt(enemyOffset);
+        
         Instantiate(gatePrefab, position, Quaternion.identity, transform);
+    }
+
+    private void AddEnemy()
+    {
+        if (GameState.SpawnedSquadronsCount < GameManager.Instance.GameSetup.minSquadronCountToSpawnEnemies) return;
+        
+        for (int i = 0; i < GameManager.Instance.GameSetup.CurrentLevel.enemiesInSquadron; i++)
+        {
+            if (Random.Range(0f, 1f) >= GameManager.Instance.GameSetup.CurrentLevel.enemyRatio)
+            {
+                int enemyOffset = Random.Range(0, _enemies.Count);
+                Vector3 position = _enemies[enemyOffset].transform.position;
+                
+                Destroy(_enemies[enemyOffset].gameObject);
+
+                Enemy enemyToSpawn =
+                    GameManager.Instance.GameSetup.CurrentLevel.enemies[
+                        Random.Range(0, GameManager.Instance.GameSetup.CurrentLevel.enemies.Length)];
+                
+                _enemies[enemyOffset] = Instantiate(enemyToSpawn, position, Quaternion.identity, transform);
+            }
+        }
     }
 
     public void Remove()

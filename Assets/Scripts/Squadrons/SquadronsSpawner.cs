@@ -1,13 +1,9 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using pixelook;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class SquadronsSpawner : MonoBehaviour
 {
-    [SerializeField] private EnemySquadron[] squadronPrefabs;
-    
     [SerializeField] private float startZ = 15;
     [SerializeField] private float offsetZ = 15;
     [SerializeField] private float offsetX = 2;
@@ -22,12 +18,17 @@ public class SquadronsSpawner : MonoBehaviour
 
     public EnemySquadron Spawn()
     {
-        EnemySquadron instance = Instantiate(squadronPrefabs[Random.Range(0, squadronPrefabs.Length)], transform);
+        EnemySquadron[] availableSquadrons = GameManager.Instance.GameSetup
+            .levels[GameManager.Instance.GameSetup.LevelNumberBySpawnedSquadrons].enemySquadrons;
+        
+        EnemySquadron instance = Instantiate(availableSquadrons[Random.Range(0, availableSquadrons.Length)], transform);
 
         instance.transform.position = new Vector3(Random.Range(-offsetX, offsetX), 0, _nextZ);
         instance.transform.Rotate(Vector3.forward * Random.Range(-rotation, rotation));
 
         _nextZ += offsetZ;
+
+        GameState.SpawnedSquadronsCount++;
 
         return instance;
     }

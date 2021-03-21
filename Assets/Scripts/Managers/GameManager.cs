@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
         Instance = this;
         
         Application.targetFrameRate = 60;
+        
+        GameState.OnApplicationStarted();
     }
 
     private void OnEnable()
@@ -52,7 +54,7 @@ public class GameManager : MonoBehaviour
 
     private void OnGameStarted()
     {
-        GameState.Reset();
+        GameState.OnGameStarted();
     }
 
     private void OnLevelChanged()
@@ -77,9 +79,9 @@ public class GameManager : MonoBehaviour
         //     "World_1", 
         //     $"Level_{GameState.Level}",
         //     GameState.Score);
-        //
-        // GameServices.ReportScore(Constants.TopScoreLeaderBoardId, GameState.Score);
-        // GameServices.ReportScore(Constants.TopDistanceReachedId, GameState.Distance);
+        
+        GameServices.ReportScore(Constants.TopScoreLeaderBoardId, GameState.Score);
+        GameServices.ReportScore(Constants.TopDistanceReachedId, GameState.Distance);
 
         StartCoroutine(WaitAndRestart());
     }

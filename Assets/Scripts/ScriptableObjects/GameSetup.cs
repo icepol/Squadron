@@ -34,20 +34,10 @@ public class GameSetup : LoadSaveScriptableObject, IResetBeforeBuild
 
     public SkinSetup[] skins;
     
-    [Header("Floor Settings")]
-    public int floorVisibleRowsCount = 30;
-    
     [Header("Spawn Settings")]
-    public int floorMinRowsCountToSpawnObstacles = 5;
-    public int floorMinRowsCountToSpawnCollectibles = 5;
-    
-    [Header("Row Behaviour Settings")]
-    public float rowDelayBeforeShaking = 2;
-    public float rowDelayBeforeFalling = 1;
+    public int minSpawnedSquadrons;
+    public int minSquadronCountToSpawnEnemies = 5;
 
-    [Header("Background Settings")]
-    public Color[] cameraBackgroundColors;
-    
     [Header("Levels Settings")]
     public LevelSetup[] levels;
     
@@ -71,4 +61,27 @@ public class GameSetup : LoadSaveScriptableObject, IResetBeforeBuild
         SelectedSkinIndex = 0;
         AreUnlockedAll = false;
     }
+    
+    public int LevelNumberBySpawnedSquadrons
+    {
+        get
+        {
+            int rows = 0;
+            int levelNumber = 0;
+
+            foreach (LevelSetup levelSetup in levels)
+            {
+                levelNumber++;
+                rows += levelSetup.squadronsPerLevel;
+
+                if (GameState.SpawnedSquadronsCount <= rows)
+                    // this is the level we are currently spawning for
+                    break;
+            }
+
+            return levelNumber < levels.Length ? levelNumber : levels.Length - 1;
+        }
+    }
+
+    public LevelSetup CurrentLevel => levels[LevelNumberBySpawnedSquadrons];
 }

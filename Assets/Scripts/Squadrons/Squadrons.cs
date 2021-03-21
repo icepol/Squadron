@@ -40,7 +40,7 @@ public class Squadrons : MonoBehaviour
 
     void SpawnIfNeeded()
     {
-        while (_enemySquadrons.Count < minSpawnedSquadrons)
+        while (_enemySquadrons.Count < GameManager.Instance.GameSetup.minSpawnedSquadrons)
         {
             _enemySquadrons.Add(_squadronsSpawner.Spawn());
         }
