@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f33ec95f768014376aad791a34533b06, type: 3}
-  m_Name: 005.Sputnik
+  m_Name: 008.DragonAndAriane
   m_EditorClassIdentifier: 
-  name: Biplane
+  name: Dragon III and Ariane 5
   scoreForUnlock: 0
   isUnlocked: 1
-  model: {fileID: 919132149155446097, guid: 5581829437340407580d60df3042fbfc, type: 3}
+  model: {fileID: 919132149155446097, guid: b4a1d5325fd2148ad95249ecff5669ce, type: 3}
   achievementIdAndroid: 
   achievementIdIos: 
   isProduction: 1

@@ -20,6 +20,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a0d60e3c59fb2432d8d5cfd538aef50e, type: 2}
   - {fileID: 11400000, guid: 944e53d73511e48b2a44d0ac83943eea, type: 2}
   - {fileID: 11400000, guid: 4f2eff16a83794349aa8b006cfe45204, type: 2}
+  - {fileID: 11400000, guid: 9e904ee02ca0e41aea70e77d6d51e577, type: 2}
+  - {fileID: 11400000, guid: 282b011501939475b82966e7ba73ed99, type: 2}
+  - {fileID: 11400000, guid: f8a3291c15a0b4307ad953904a0978d0, type: 2}
+  - {fileID: 11400000, guid: 41570240bd2f24f43b3486e35f0e6654, type: 2}
+  - {fileID: 11400000, guid: 9aab55dc5fae340749b0f281bc097035, type: 2}
+  - {fileID: 11400000, guid: 32045a9c42f7c472eb7bbd9cf03a4bdf, type: 2}
   minSpawnedSquadrons: 10
   minSquadronCountToSpawnEnemies: 5
   levels:
