@@ -154,7 +154,7 @@ MonoBehaviour:
   triggerDistance: 0
   stopChasingAtDistance: 0
   isTriggeredWhenFollowing: 1
-  chaseSpeed: 7.5
+  chaseSpeed: 10
   chaseConstantly: 0
 --- !u!114 &5737162307346243308
 MonoBehaviour:

@@ -151,11 +151,11 @@ MonoBehaviour:
   engineDust: {fileID: 5663690644213293458}
   explosion: {fileID: 0}
   isTriggeredByDistance: 1
-  triggerDistance: 30
+  triggerDistance: 20
   stopChasingAtDistance: 0
   isTriggeredWhenFollowing: 0
   chaseSpeed: 5
-  chaseConstantly: 1
+  chaseConstantly: 0
 --- !u!114 &5737162307346243308
 MonoBehaviour:
   m_ObjectHideFlags: 0
