@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd4fc196de80453bb8f9145450f8ce8, type: 3}
   m_Name: Level_005
   m_EditorClassIdentifier: 
-  squadronsPerLevel: 20
+  squadronsPerLevel: 10
   enemyRatio: 0.2
-  enemiesInSquadron: 2
+  enemiesInSquadron: 1
   enemySquadrons:
   - {fileID: 3130597074930415566, guid: 92f3e9b40075540c1934c32537526d27, type: 3}
   - {fileID: 3130597074930415566, guid: 6091656918f11422abaf1b0fcc828c08, type: 3}

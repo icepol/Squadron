@@ -10,14 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ecd4fc196de80453bb8f9145450f8ce8, type: 3}
-  m_Name: Level_001
+  m_Name: Level_016_final_battle
   m_EditorClassIdentifier: 
-  squadronsPerLevel: 15
+  squadronsPerLevel: 5
   enemyRatio: 0.1
-  enemiesInSquadron: 1
+  enemiesInSquadron: 2
   enemySquadrons:
   - {fileID: 3130597074930415566, guid: 92f3e9b40075540c1934c32537526d27, type: 3}
   - {fileID: 3130597074930415566, guid: 6091656918f11422abaf1b0fcc828c08, type: 3}
   - {fileID: 3130597074930415566, guid: 887d52ac1019643138e8bd4bd72ec807, type: 3}
   enemies:
   - {fileID: 4224499230387032097, guid: b2f2e686bad6d4ac5b780a7618398a24, type: 3}
+  - {fileID: 4224499230387032097, guid: fa4364c68590741fab05b3717e69cf18, type: 3}
+  - {fileID: 4224499230387032097, guid: ff6cbcb36fa094d57a8b6f6956b999ef, type: 3}
+  - {fileID: 4224499230387032097, guid: 6208a1e7e28054264a8bd5689624db25, type: 3}
+  - {fileID: 4224499230387032097, guid: 0e086ff5783494029882b3243c88bc92, type: 3}
+  - {fileID: 4224499230387032097, guid: 36d9b14b0105f4ad29e40ff736b6f3eb, type: 3}
+  - {fileID: 4224499230387032097, guid: d64575b4f352b49bb8e5a6e8e082b4cd, type: 3}

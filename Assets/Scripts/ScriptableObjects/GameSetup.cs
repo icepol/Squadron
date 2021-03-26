@@ -79,9 +79,9 @@ public class GameSetup : LoadSaveScriptableObject, IResetBeforeBuild
                     break;
             }
 
-            return levelNumber < levels.Length ? levelNumber : levels.Length - 1;
+            return levelNumber < levels.Length ? levelNumber : levels.Length;
         }
     }
 
-    public LevelSetup CurrentLevel => levels[LevelNumberBySpawnedSquadrons];
+    public LevelSetup CurrentLevel => levels[LevelNumberBySpawnedSquadrons - 1];
 }

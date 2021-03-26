@@ -19,8 +19,7 @@ public class SquadronsSpawner : MonoBehaviour
 
     public EnemySquadron Spawn()
     {
-        EnemySquadron[] availableSquadrons = GameManager.Instance.GameSetup
-            .levels[GameManager.Instance.GameSetup.LevelNumberBySpawnedSquadrons].enemySquadrons;
+        EnemySquadron[] availableSquadrons = GameManager.Instance.GameSetup.CurrentLevel.enemySquadrons;
         
         EnemySquadron instance = Instantiate(availableSquadrons[Random.Range(0, availableSquadrons.Length)], transform);
 
