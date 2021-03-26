@@ -10,6 +10,7 @@ public class SquadronsSpawner : MonoBehaviour
     [SerializeField] private float rotation = 45;
 
     private float _nextZ;
+    private float _lastRotation;
 
     private void Awake()
     {
@@ -23,8 +24,10 @@ public class SquadronsSpawner : MonoBehaviour
         
         EnemySquadron instance = Instantiate(availableSquadrons[Random.Range(0, availableSquadrons.Length)], transform);
 
+        _lastRotation += Random.Range(-rotation, rotation);
+
         instance.transform.position = new Vector3(Random.Range(-offsetX, offsetX), 0, _nextZ);
-        instance.transform.Rotate(Vector3.forward * Random.Range(-rotation, rotation));
+        instance.transform.Rotate(Vector3.forward * _lastRotation);
 
         _nextZ += offsetZ;
 

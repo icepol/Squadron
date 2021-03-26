@@ -57,12 +57,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ff1ef5eeffcf442b9c67303b857a748, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  squadronPrefabs:
-  - {fileID: 3130597074930415566, guid: 92f3e9b40075540c1934c32537526d27, type: 3}
-  - {fileID: 3130597074930415566, guid: 6091656918f11422abaf1b0fcc828c08, type: 3}
-  - {fileID: 3130597074930415566, guid: 887d52ac1019643138e8bd4bd72ec807, type: 3}
-  - {fileID: 3130597074930415566, guid: 86376e84ea02846ff9575bcdfb1d53c0, type: 3}
   startZ: 15
   offsetZ: 15
   offsetX: 3
-  rotation: 45
+  rotation: 30
