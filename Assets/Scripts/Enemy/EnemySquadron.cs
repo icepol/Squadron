@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using pixelook;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class EnemySquadron : MonoBehaviour
 {
@@ -11,8 +12,13 @@ public class EnemySquadron : MonoBehaviour
     private IFollowing[] _followings;
 
     private bool _isFollowing;
+    private Transform _mostLeftElement;
+    private Transform _mostRightElement;
     
     public float Width { get; private set; }
+    
+    public Vector3 LeftPosition { get; private set; }
+    public Vector3 RightPosition { get; private set; }
 
     public bool IsFollowing
     {
@@ -32,7 +38,12 @@ public class EnemySquadron : MonoBehaviour
     private void Awake()
     {
         _enemies = new List<Enemy>(GetComponentsInChildren<Enemy>());
+    }
 
+    public void Initialize()
+    {
+        // called after the squadron is on the right position
+        
         CalculateWidth();
         AddGate();
         AddEnemy();
@@ -42,18 +53,33 @@ public class EnemySquadron : MonoBehaviour
 
     private void CalculateWidth()
     {
-        float minX = 0;
-        float maxX = 0;
+        float minX = _enemies[0].transform.position.x;
+        float maxX = minX;
 
         foreach (Enemy enemy in _enemies)
         {
             Vector3 enemyPosition = enemy.transform.position;
-            
-            minX = enemyPosition.x < minX ? enemyPosition.x : minX;
-            maxX = enemyPosition.x > maxX ? enemyPosition.x : maxX;
+
+            if (enemyPosition.x < minX)
+            {
+                minX = enemyPosition.x;
+                _mostLeftElement = enemy.transform;
+            }
+
+            if (enemyPosition.x > maxX)
+            {
+                maxX = enemyPosition.x;
+                _mostRightElement = enemy.transform;
+            }
         }
 
         Width = maxX - minX;
+    }
+
+    public void StorePositions()
+    {
+        LeftPosition = _mostLeftElement.position;
+        RightPosition = _mostRightElement.position;
     }
 
     private void AddGate()

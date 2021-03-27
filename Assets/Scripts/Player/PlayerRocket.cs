@@ -14,7 +14,7 @@ public class PlayerRocket : MonoBehaviour
     private Vector3 _returningPosition;
     private Vector3 _originRotation;
 
-    public float CurrentPositionPercentage => transform.localPosition.x / maxDeltaX;
+    public float CurrentPositionPercentage => (transform.localPosition.x + maxDeltaX) / (maxDeltaX * 2);
     
     void Start()
     {
@@ -26,7 +26,7 @@ public class PlayerRocket : MonoBehaviour
     {
         transform.localRotation = Quaternion.RotateTowards(
             transform.localRotation, 
-            Quaternion.Euler(_originRotation.x, _originRotation.y, maxRotation * CurrentPositionPercentage), 
+            Quaternion.Euler(_originRotation.x, _originRotation.y, maxRotation * (CurrentPositionPercentage - 0.5f)), 
             maxDegreesDelta);
     }
 

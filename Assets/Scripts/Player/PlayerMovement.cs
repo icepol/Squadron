@@ -77,9 +77,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void MoveToPosition()
     {
-        Vector3 targetPosition = _targetSquadron.transform.position;
-        targetPosition.x += _playerRocket.CurrentPositionPercentage * _targetSquadron.Width / 2;
-
+        Vector3 targetPosition = Vector3.Lerp(_targetSquadron.LeftPosition, _targetSquadron.RightPosition, _playerRocket.CurrentPositionPercentage);
+        
         transform.position = Vector3.MoveTowards(
             transform.position,
             targetPosition,
