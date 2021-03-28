@@ -58,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
 
         _currentRotationTime = 0;
         _timeToRotate = Vector3.Distance(transform.position, _targetSquadron.transform.position) / GetMaxDistanceDelta() *
-                        0.75f;
+                        0.7f;
 
         _sourceRotation = transform.rotation;
         _targetRotation = _targetSquadron.transform.rotation;
