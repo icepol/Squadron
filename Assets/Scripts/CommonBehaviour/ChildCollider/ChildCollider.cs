@@ -8,7 +8,10 @@ public class ChildCollider : MonoBehaviour
     {
         foreach (GameObject collisionHandler in collisionHandlers)
         {
-            collisionHandler.GetComponent<ICollisionHandler>().OnTriggerEnter(other);            
+            foreach (ICollisionHandler handler in collisionHandler.GetComponents<ICollisionHandler>())
+            {
+                handler.OnTriggerEnter(other);
+            }
         }
     }
 }
