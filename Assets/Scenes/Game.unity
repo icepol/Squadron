@@ -414,13 +414,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3917353016340477419, guid: 2f871f02dbc2d4cebabfb8b8f63f6419, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f5e9a70e70d6a41ba963450899c63906, type: 2}
     - target: {fileID: 3917353016340477421, guid: 2f871f02dbc2d4cebabfb8b8f63f6419, type: 3}
       propertyPath: m_Name
       value: HelpPanel
       objectReference: {fileID: 0}
     - target: {fileID: 3917353016340477421, guid: 2f871f02dbc2d4cebabfb8b8f63f6419, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f871f02dbc2d4cebabfb8b8f63f6419, type: 3}
@@ -867,26 +871,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PurchaseInProgress
       objectReference: {fileID: 0}
-    - target: {fileID: 2139963418244670703, guid: 8d33209e9004e434aa38a140fabb7630, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2139963418544698188, guid: 8d33209e9004e434aa38a140fabb7630, type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2139963418544698188, guid: 8d33209e9004e434aa38a140fabb7630, type: 3}
-      propertyPath: m_Color.g
-      value: 0.8745098
-      objectReference: {fileID: 0}
-    - target: {fileID: 2139963418544698188, guid: 8d33209e9004e434aa38a140fabb7630, type: 3}
-      propertyPath: m_Color.r
-      value: 0.98039216
-      objectReference: {fileID: 0}
-    - target: {fileID: 2139963418544698188, guid: 8d33209e9004e434aa38a140fabb7630, type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: 826377a9975f543a48f309a6872ec707, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d33209e9004e434aa38a140fabb7630, type: 3}
 --- !u!224 &1590389831 stripped
@@ -1119,10 +1103,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1416603409}
     m_Modifications:
-    - target: {fileID: 1807129207, guid: 4c5419ad452bd46ee9dd7c6cf6b9e230, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6480329418709669545, guid: 4c5419ad452bd46ee9dd7c6cf6b9e230, type: 3}
       propertyPath: m_Name
       value: MenuPanel
@@ -1432,18 +1412,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2989884003540943183, guid: 34dd4395f17054437981da659cbdcdbb, type: 3}
-      propertyPath: rotation
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 2989884003540943183, guid: 34dd4395f17054437981da659cbdcdbb, type: 3}
-      propertyPath: directionStepsMax
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2989884003540943183, guid: 34dd4395f17054437981da659cbdcdbb, type: 3}
-      propertyPath: directionStepsMin
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34dd4395f17054437981da659cbdcdbb, type: 3}
 --- !u!1001 &3772751200556798381
@@ -1501,9 +1469,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3772751199110392715, guid: 46370c7f075814ce5b4a80461e852efe, type: 3}
-      propertyPath: gameSetup
-      value: 
-      objectReference: {fileID: 11400000, guid: c46e4d4ab83a744d396617513fc4563a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46370c7f075814ce5b4a80461e852efe, type: 3}

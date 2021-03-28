@@ -9,6 +9,7 @@
         public const string GAME_STARTED = "GameStarted";
         public const string LEVEL_CHANGED = "LevelChanged";
         public const string SCORE_CHANGED = "ScoreChanged";
+        public const string COMBO_MULTIPLIER_CHANGED = "ComboMultiplierChanged";
 
         public const string PLAYER_DIED = "PlayerDied";
         public const string PLAYER_COLLIDED_OBSTACLE = "PlayerCollidedObstacle";

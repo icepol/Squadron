@@ -3,14 +3,13 @@
     public static class GameState
     {
         private static int _score;
-        private static int _coins;
+        private static int _comboMultiplier;
 
         private static int _level = 1;
 
         public static int Score
         {
             get => _score;
-            
             set
             {
                 _score = value;
@@ -20,7 +19,16 @@
         
         public static int Distance { get; set; }
 
-        public static int ComboMultiplier { get; set; }
+        public static int ComboMultiplier
+        {
+            get => _comboMultiplier;
+            set
+            {
+                _comboMultiplier = value;
+                
+                EventManager.TriggerEvent(Events.COMBO_MULTIPLIER_CHANGED);
+            }
+        }
         
         public static int SpawnedSquadronsCount { get; set; }
 

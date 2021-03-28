@@ -3,14 +3,6 @@ using UnityEngine;
 
 public class HelpPanel : MonoBehaviour
 {
-    private Animator _animator;
-    private bool _isHidden;
-
-    private void Awake()
-    {
-        _animator = GetComponent<Animator>();
-    }
-
     private void OnEnable()
     {
         EventManager.AddListener(Events.GAME_STARTED, OnGameStarted);
@@ -24,9 +16,6 @@ public class HelpPanel : MonoBehaviour
 
     private void OnGameStarted()
     {
-        if (_isHidden) return;
-        
-        _animator.SetTrigger("Hide");
-        _isHidden = true;
+        Destroy(gameObject);
     }
 }

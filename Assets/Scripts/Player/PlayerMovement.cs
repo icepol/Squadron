@@ -1,4 +1,3 @@
-using System;
 using pixelook;
 using UnityEngine;
 
@@ -58,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
         _targetSquadron = _squadrons.GetFollowingSquadron();
 
         _currentRotationTime = 0;
-        _timeToRotate = Vector3.Distance(transform.position, _targetSquadron.transform.position) / maxDistanceDelta *
+        _timeToRotate = Vector3.Distance(transform.position, _targetSquadron.transform.position) / GetMaxDistanceDelta() *
                         0.75f;
 
         _sourceRotation = transform.rotation;
@@ -82,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
         transform.position = Vector3.MoveTowards(
             transform.position,
             targetPosition,
-            maxDistanceDelta * Time.deltaTime);
+            GetMaxDistanceDelta() * Time.deltaTime);
     }
 
     private void RotateToPosition()
@@ -95,5 +94,16 @@ public class PlayerMovement : MonoBehaviour
         
         EventManager.TriggerEvent(Events.PLAYER_ROTATION_CHANGED, transform.rotation.eulerAngles);
         EventManager.TriggerEvent(Events.PLAYER_POSITION_CHANGED, transform.position);
+    }
+
+    private float GetMaxDistanceDelta()
+    {
+        return GameState.ComboMultiplier switch
+        {
+            0 => maxDistanceDelta,
+            1 => maxDistanceDelta,
+            2 => maxDistanceDelta * 1.1f,
+            _ => maxDistanceDelta * 1.3f
+        };
     }
 }

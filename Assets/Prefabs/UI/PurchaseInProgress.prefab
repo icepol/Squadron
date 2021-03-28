@@ -20,7 +20,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2139963418244670702
 RectTransform:
   m_ObjectHideFlags: 0
@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.45490196, g: 0.76862746, b: 0.9607843, a: 1}
+  m_Color: {r: 0.98039216, g: 0.8745098, b: 0, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -191,7 +191,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: eb7bf77687c58418bb336ed882e92a35, type: 3}
+    m_Font: {fileID: 12800000, guid: 826377a9975f543a48f309a6872ec707, type: 3}
     m_FontSize: 128
     m_FontStyle: 1
     m_BestFit: 0

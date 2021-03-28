@@ -60,4 +60,6 @@ MonoBehaviour:
   startZ: 15
   offsetZ: 15
   offsetX: 3
-  rotation: 30
+  rotation: 25
+  directionStepsMin: 3
+  directionStepsMax: 10
