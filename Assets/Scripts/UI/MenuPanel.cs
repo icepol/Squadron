@@ -47,12 +47,7 @@ public class MenuPanel : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
-
-    public void OnPlayButtonClick()
-    {
-        EventManager.TriggerEvent(Events.GAME_STARTED);
-    }
-
+    
     public void OnSettingsButtonClick()
     {
         _animator.SetTrigger("ToggleSettings");

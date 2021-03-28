@@ -1,3 +1,4 @@
+using System;
 using pixelook;
 using UnityEngine;
 
@@ -7,6 +8,8 @@ public class PlayerController : MonoBehaviour
  
     private Vector3 _startRocketPosition;
     private Vector3 _startMousePosition;
+    private float _controllerHeight;
+    
     private bool _isGameRunning;
     private bool _isMoving;
     private bool _isReturning;
@@ -17,33 +20,27 @@ public class PlayerController : MonoBehaviour
     {
         _playerRocket = GetComponentInChildren<PlayerRocket>();
     }
-    
-    private void OnEnable()
+
+    private void Start()
     {
-        EventManager.AddListener(Events.GAME_STARTED, OnGameStarted);
+        _controllerHeight = Screen.height / 3f;
     }
 
     void Update()
     {
-        if (!_isGameRunning) return;
-
         MovePlayerRocker();
-    }
-
-    private void OnDisable()
-    {
-        EventManager.RemoveListener(Events.GAME_STARTED, OnGameStarted);
-    }
-
-    private void OnGameStarted()
-    {
-        _isGameRunning = true;
     }
     
     private void MovePlayerRocker()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && Input.mousePosition.y < _controllerHeight)
         {
+            if (!_isGameRunning)
+            {
+                _isGameRunning = true;
+                EventManager.TriggerEvent(Events.GAME_STARTED);
+            }
+            
             _startMousePosition = Input.mousePosition;
             _startRocketPosition = _playerRocket.transform.localPosition;
 
@@ -60,7 +57,7 @@ public class PlayerController : MonoBehaviour
             _playerRocket.MoveToPosition(_startRocketPosition.x +
                                          (Input.mousePosition.x - _startMousePosition.x) / Screen.width * mouseSensitivity);
         }
-        else if (_isReturning)
+        else if (_isGameRunning && _isReturning)
         {
             _playerRocket.ReturnToBasePosition();
         }
