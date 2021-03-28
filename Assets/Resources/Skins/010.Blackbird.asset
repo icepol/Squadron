@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 010.Blackbird
   m_EditorClassIdentifier: 
   name: Blackbird
-  scoreForUnlock: 0
-  isUnlocked: 1
+  scoreForUnlock: 2800
+  isUnlocked: 0
   model: {fileID: 919132149155446097, guid: a45077eed30ec4c08b346630e705feef, type: 3}
   achievementIdAndroid: 
   achievementIdIos: 

@@ -88,7 +88,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91aadd8b06cb94ac1a3298a57aeaaab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinsForUnlockPrefab: {fileID: 5247657755322895643, guid: e5d2b0e7355774f7cadac3ea66e93ef1, type: 3}
+  requiredForUnlockPrefab: {fileID: 5247657755322895643, guid: e5d2b0e7355774f7cadac3ea66e93ef1, type: 3}
+  moveTime: 0.5
 --- !u!95 &750491088717375432
 Animator:
   serializedVersion: 3

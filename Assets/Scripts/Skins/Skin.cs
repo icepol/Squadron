@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Skin : MonoBehaviour
 {
-    [SerializeField] private CoinsForUnlock coinsForUnlockPrefab;
+    [SerializeField] private RequiredForUnlock requiredForUnlockPrefab;
     [SerializeField] private float moveTime = 0.5f;
     
     private Animator _animator;
@@ -40,7 +40,7 @@ public class Skin : MonoBehaviour
         }
         else
         {
-            CoinsForUnlock instance = Instantiate(coinsForUnlockPrefab, _skinModelWrapper.transform, false);
+            RequiredForUnlock instance = Instantiate(requiredForUnlockPrefab, _skinModelWrapper.transform, false);
             instance.SetRequiredValue(skinSetup.scoreForUnlock);
         }
     }

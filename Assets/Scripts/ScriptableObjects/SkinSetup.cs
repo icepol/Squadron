@@ -46,7 +46,7 @@ public class SkinSetup : LoadSaveScriptableObject
 
     private void OnScoreChanged()
     {
-        if (IsUnlocked || GameState.Score != scoreForUnlock) return;
+        if (IsUnlocked || GameState.Score < scoreForUnlock) return;
 
         IsUnlocked = true;
         

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CoinsForUnlock : MonoBehaviour
+public class RequiredForUnlock : MonoBehaviour
 {
     [SerializeField] private TextMesh[] text;
 
@@ -8,7 +8,7 @@ public class CoinsForUnlock : MonoBehaviour
     {
         foreach (TextMesh text in text)
         {
-            text.text = $"x{value}";
+            text.text = $"{value}";
         }
     }
 }
