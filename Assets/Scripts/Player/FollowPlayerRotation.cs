@@ -18,7 +18,7 @@ public class FollowPlayerRotation : MonoBehaviour
     private void Start()
     {
         if (_player != null)
-            transform.rotation = Quaternion.Euler(0, 0, _player.transform.rotation.z);
+            transform.rotation = Quaternion.Euler(0, 0, _player.transform.rotation.eulerAngles.z);
     }
     
     private void OnDisable()

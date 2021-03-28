@@ -46,3 +46,6 @@ MonoBehaviour:
   targetTransform: {fileID: 0}
   playerObstacleContact: {fileID: 8300000, guid: e85be882486454a1da822e950692f0bb, type: 3}
   playerGatePassed: {fileID: 8300000, guid: 863336857d4cf4359a214682b4c84ef4, type: 3}
+  playerGatePassedPhase2: {fileID: 8300000, guid: 9f074a585522a4485b191fd7ade017ea, type: 3}
+  playerGatePassedPhase3: {fileID: 8300000, guid: 81a11bc5af3af4b6cbc3cfd20c997bce, type: 3}
+  playerGateDestroyed: {fileID: 8300000, guid: 460d3e0177c524f96bb93109aae78a82, type: 3}

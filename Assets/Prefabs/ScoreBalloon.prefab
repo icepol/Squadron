@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3480438398956335176}
   - component: {fileID: 2850586209554490029}
   - component: {fileID: 1521186545}
+  - component: {fileID: -3720666705663417042}
   m_Layer: 0
   m_Name: ScoreBalloon
   m_TagString: Untagged
@@ -65,6 +66,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-3720666705663417042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3480438398956335177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0c8b616cd1454adeb7d60eee52bbc79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3480438399597411448
 GameObject:
   m_ObjectHideFlags: 0

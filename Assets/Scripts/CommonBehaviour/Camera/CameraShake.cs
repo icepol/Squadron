@@ -14,11 +14,18 @@ namespace pixelook
         void OnEnable()
         {
             EventManager.AddListener(Events.PLAYER_DIED, OnPlayerDied);
+            EventManager.AddListener(Events.PLAYER_GATE_DESTROYED, OnPlayerGateDestroyed);
         }
 
         private void OnDisable()
         {
             EventManager.RemoveListener(Events.PLAYER_DIED, OnPlayerDied);
+            EventManager.RemoveListener(Events.PLAYER_GATE_DESTROYED, OnPlayerGateDestroyed);
+        }
+
+        private void OnPlayerGateDestroyed()
+        {
+            _animator.SetTrigger("ShakeSmall");
         }
 
         private void OnPlayerDied()

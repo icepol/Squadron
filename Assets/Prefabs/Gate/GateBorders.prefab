@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!135 &5463788111725562919
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2659498682914825771}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.002
-  m_Center: {x: 0.003, y: 0, z: 0.011}
 --- !u!135 &4008116611891964496
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -39,6 +26,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.002
   m_Center: {x: 0.011, y: 0, z: 0.003}
+--- !u!135 &5463788111725562919
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2659498682914825771}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.002
+  m_Center: {x: 0.003, y: 0, z: 0.011}
 --- !u!114 &247064909509017199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51,19 +51,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 005a987675d4f43d19f37bbcf59cf169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!135 &8875619598036754286
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5735278990251422165}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.002
-  m_Center: {x: 0.003, y: 0, z: 0.011}
+  collisionHandlers:
+  - {fileID: 7499338469821882662}
 --- !u!135 &2376017513158409377
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -90,6 +79,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.002
   m_Center: {x: 0.011, y: 0, z: 0.003}
+--- !u!135 &8875619598036754286
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5735278990251422165}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.002
+  m_Center: {x: 0.003, y: 0, z: 0.011}
 --- !u!114 &6915573351357731491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,6 +104,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 005a987675d4f43d19f37bbcf59cf169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collisionHandlers:
+  - {fileID: 7499338469821882662}
 --- !u!135 &5144535268911744380
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -153,6 +157,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 005a987675d4f43d19f37bbcf59cf169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collisionHandlers:
+  - {fileID: 7499338469821882662}
 --- !u!1 &7499338469821882662
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,6 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282bf7f6fec554551a4c555864f7e760, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gateExplosion: {fileID: 306484354556389829, guid: 8d096cd09f2a246e7ad1774c473b19e7, type: 3}
 --- !u!114 &8040942538472854434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,19 +286,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.002
   m_Center: {x: 0.003, y: 0, z: 0.011}
---- !u!135 &8648879543858079332
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8484227589570729434}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.002
-  m_Center: {x: 0.008, y: 0, z: 0.008}
 --- !u!135 &5252865868136343971
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -305,6 +299,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.002
   m_Center: {x: 0.011, y: 0, z: 0.003}
+--- !u!135 &8648879543858079332
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8484227589570729434}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.002
+  m_Center: {x: 0.008, y: 0, z: 0.008}
 --- !u!114 &8225492147806934697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -317,6 +324,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 005a987675d4f43d19f37bbcf59cf169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collisionHandlers:
+  - {fileID: 7499338469821882662}
 --- !u!1001 &2893851003487837050
 PrefabInstance:
   m_ObjectHideFlags: 0

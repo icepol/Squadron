@@ -2,18 +2,13 @@ using UnityEngine;
 
 public class ChildCollider : MonoBehaviour
 {
-    private ICollisionHandler[] _collisionHandlers;
-
-    private void Awake()
-    {
-        _collisionHandlers = GetComponentsInParent<ICollisionHandler>();
-    }
+    [SerializeField] private GameObject[] collisionHandlers;
 
     private void OnTriggerEnter(Collider other)
     {
-        foreach (ICollisionHandler collisionHandler in _collisionHandlers)
+        foreach (GameObject collisionHandler in collisionHandlers)
         {
-            collisionHandler.OnTriggerEnter(other);            
+            collisionHandler.GetComponent<ICollisionHandler>().OnTriggerEnter(other);            
         }
     }
 }
