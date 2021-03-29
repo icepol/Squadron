@@ -18,4 +18,4 @@ MonoBehaviour:
   model: {fileID: 919132149155446097, guid: 6b020f9d55bfd447d827fde88b7bec3c, type: 3}
   achievementIdAndroid: 
   achievementIdIos: 
-  isProduction: 1
+  isProduction: 0
