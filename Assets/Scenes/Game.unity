@@ -426,6 +426,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3917353016540638804, guid: 2f871f02dbc2d4cebabfb8b8f63f6419, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3917353016540638804, guid: 2f871f02dbc2d4cebabfb8b8f63f6419, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8901961
+      objectReference: {fileID: 0}
+    - target: {fileID: 3917353016540638804, guid: 2f871f02dbc2d4cebabfb8b8f63f6419, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f871f02dbc2d4cebabfb8b8f63f6419, type: 3}
 --- !u!224 &751582900 stripped
@@ -1311,9 +1323,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 386205529, guid: cdca6c935a7e54592b7766ff7175eaad, type: 3}
+      propertyPath: isGlobal
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 386205530, guid: cdca6c935a7e54592b7766ff7175eaad, type: 3}
       propertyPath: volumeLayer.m_Bits
       value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 386205532, guid: cdca6c935a7e54592b7766ff7175eaad, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 34755044088947112, guid: cdca6c935a7e54592b7766ff7175eaad, type: 3}
       propertyPath: m_Name
