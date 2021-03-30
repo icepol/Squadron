@@ -122,6 +122,8 @@ public class EnemySquadron : MonoBehaviour
 
     private IEnumerator WaitAndRemove()
     {
+        GameState.Distance++;
+        
         yield return new WaitForSeconds(1.5f);
         
         Destroy(gameObject);
