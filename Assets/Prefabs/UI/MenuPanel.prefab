@@ -483,7 +483,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2652031847511690280}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PurchasePanel, Assembly-CSharp
         m_MethodName: OnUnlockAllSkinsButtonClick
         m_Mode: 1
@@ -507,7 +507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a5f511b0d8142cba0aeb92d0b264c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productId: jumpig_unlock_all_skins
+  productId: squadron_unlock_all_skins
   buttonType: 0
   consumePurchase: 1
   onPurchaseComplete:
@@ -2147,7 +2147,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2652031847511690280}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PurchasePanel, Assembly-CSharp
         m_MethodName: OnRestorePurchasesButtonClick
         m_Mode: 1
@@ -2177,7 +2177,7 @@ MonoBehaviour:
   onPurchaseComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2652031847511690280}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PurchasePanel, Assembly-CSharp
         m_MethodName: OnUnlockAllSkinsPurchaseComplete
         m_Mode: 1
@@ -2192,7 +2192,7 @@ MonoBehaviour:
   onPurchaseFailed:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2652031847511690280}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PurchasePanel, Assembly-CSharp
         m_MethodName: OnUnlockAllSkinsPurchaseFailed
         m_Mode: 1
@@ -2807,6 +2807,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PurchasePanel
       objectReference: {fileID: 0}
+    - target: {fileID: 2139963418244670703, guid: 8d33209e9004e434aa38a140fabb7630, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2139963418544698188, guid: 8d33209e9004e434aa38a140fabb7630, type: 3}
       propertyPath: m_Color.b
       value: 0
@@ -2823,21 +2827,11 @@ PrefabInstance:
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: 826377a9975f543a48f309a6872ec707, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6958488908963332713, guid: 8d33209e9004e434aa38a140fabb7630, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8d33209e9004e434aa38a140fabb7630, type: 3}
 --- !u!224 &6480329418403850927 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2139963418244670702, guid: 8d33209e9004e434aa38a140fabb7630, type: 3}
   m_PrefabInstance: {fileID: 4925930983635832385}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2652031847511690280 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6958488908963332713, guid: 8d33209e9004e434aa38a140fabb7630, type: 3}
-  m_PrefabInstance: {fileID: 4925930983635832385}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee3d4f453b9c84725a5bf227041895d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
