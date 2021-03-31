@@ -154,10 +154,10 @@ MonoBehaviour:
   explosion: {fileID: 0}
   isTriggeredByDistance: 1
   triggerDistance: 40
-  stopChasingAtDistance: 0
+  stopChasingAtDistance: 2
   isTriggeredWhenFollowing: 0
-  chaseSpeed: 5
-  chaseConstantly: 0
+  chaseSpeed: 10
+  chaseConstantly: 1
 --- !u!114 &5737162307346243308
 MonoBehaviour:
   m_ObjectHideFlags: 0

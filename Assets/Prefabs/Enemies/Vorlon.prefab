@@ -154,7 +154,7 @@ MonoBehaviour:
   explosion: {fileID: 0}
   isTriggeredByDistance: 1
   triggerDistance: 30
-  stopChasingAtDistance: 0
+  stopChasingAtDistance: 0.5
   isTriggeredWhenFollowing: 0
   chaseSpeed: 5
   chaseConstantly: 1
