@@ -53,7 +53,7 @@ public class SkinSetup : LoadSaveScriptableObject
 #if UNITY_IPHONE
         GameServices.UnlockAchievement(achievementIdIos);
 #elif UNITY_ANDROID
-        GameServices.UnlockAchievement(achievementId_Android);
+        GameServices.UnlockAchievement(achievementIdAndroid);
 #else
         // will only log the unlock event
         GameServices.UnlockAchievement(achievementIdIos);
