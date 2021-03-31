@@ -64,7 +64,7 @@ namespace pixelook
                     Debug.Log("CSVPrefs: read called");
                     sr = new StreamReader(prefsFileName);
                 }
-                catch (FileNotFoundException e)
+                catch (FileNotFoundException)
                 {
                     Debug.Log("CSVPrefs: file not found");
                     return _prefs;

@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class Squadrons : MonoBehaviour
 {
-    [SerializeField] private int minSpawnedSquadrons = 10;
-    
     private List<EnemySquadron> _enemySquadrons;
 
     private SquadronsSpawner _squadronsSpawner;

@@ -5,8 +5,6 @@
         private static int _score;
         private static int _comboMultiplier;
 
-        private static int _level = 1;
-
         public static int Score
         {
             get => _score;
