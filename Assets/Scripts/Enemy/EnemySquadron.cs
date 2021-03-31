@@ -99,7 +99,7 @@ public class EnemySquadron : MonoBehaviour
         
         for (int i = 0; i < GameManager.Instance.GameSetup.CurrentLevel.enemiesInSquadron; i++)
         {
-            if (Random.Range(0f, 1f) >= GameManager.Instance.GameSetup.CurrentLevel.enemyRatio)
+            if (Random.Range(0f, 1f) < GameManager.Instance.GameSetup.CurrentLevel.enemyRatio)
             {
                 int enemyOffset = Random.Range(0, _enemies.Count);
                 Vector3 position = _enemies[enemyOffset].transform.position;

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Level_002
   m_EditorClassIdentifier: 
   squadronsPerLevel: 15
-  enemyRatio: 0.1
+  enemyRatio: 4
   enemiesInSquadron: 1
   enemySquadrons:
   - {fileID: 3130597074930415566, guid: 92f3e9b40075540c1934c32537526d27, type: 3}
