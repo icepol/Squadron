@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f33ec95f768014376aad791a34533b06, type: 3}
   m_Name: 007.Falcon
   m_EditorClassIdentifier: 
-  name: Falcon
+  skinName: Falcon
   scoreForUnlock: 1350
   isUnlocked: 0
   model: {fileID: 919132149155446097, guid: 33f0b051546b6478e925ed48070b0777, type: 3}

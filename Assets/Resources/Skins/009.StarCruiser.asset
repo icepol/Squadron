@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f33ec95f768014376aad791a34533b06, type: 3}
   m_Name: 009.StarCruiser
   m_EditorClassIdentifier: 
-  name: StarCruiser
+  skinName: StarCruiser
   scoreForUnlock: 2300
   isUnlocked: 0
   model: {fileID: 919132149155446097, guid: db58c88b8694945d3ba3c829dae8c400, type: 3}

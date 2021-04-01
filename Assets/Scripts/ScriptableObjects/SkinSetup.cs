@@ -8,7 +8,7 @@ public class SkinSetup : LoadSaveScriptableObject
     private const string FILENAME_POSTFIX = ".json";
 
     [Header("Basic Setup")]
-    public string name;
+    public string skinName;
     public int scoreForUnlock;
     
     [SerializeField] private bool isUnlocked;
@@ -20,7 +20,7 @@ public class SkinSetup : LoadSaveScriptableObject
         {
             isUnlocked = value;
             
-            SaveToFile($"{FILENAME_PREFIX}{name.ToLower()}{FILENAME_POSTFIX}");
+            SaveToFile($"{FILENAME_PREFIX}{skinName.ToLower()}{FILENAME_POSTFIX}");
         }
     }
     
@@ -62,7 +62,7 @@ public class SkinSetup : LoadSaveScriptableObject
     
     public void LoadFromFile()
     {
-        LoadFromFile($"{FILENAME_PREFIX}{name.ToLower()}{FILENAME_POSTFIX}");
+        LoadFromFile($"{FILENAME_PREFIX}{skinName.ToLower()}{FILENAME_POSTFIX}");
     }
 
     public void ResetBeforeBuild()

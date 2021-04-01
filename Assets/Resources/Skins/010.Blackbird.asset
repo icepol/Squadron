@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f33ec95f768014376aad791a34533b06, type: 3}
   m_Name: 010.Blackbird
   m_EditorClassIdentifier: 
-  name: Blackbird
+  skinName: Blackbird
   scoreForUnlock: 2800
   isUnlocked: 0
   model: {fileID: 919132149155446097, guid: a45077eed30ec4c08b346630e705feef, type: 3}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f33ec95f768014376aad791a34533b06, type: 3}
   m_Name: 011.HeavyCruiser
   m_EditorClassIdentifier: 
-  name: HeavyCruiser
+  skinName: HeavyCruiser
   scoreForUnlock: 3300
   isUnlocked: 0
   model: {fileID: 919132149155446097, guid: b7d2c60546322425186b7fc8d34f1bb2, type: 3}

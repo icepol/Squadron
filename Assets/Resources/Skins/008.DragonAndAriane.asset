@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f33ec95f768014376aad791a34533b06, type: 3}
   m_Name: 008.DragonAndAriane
   m_EditorClassIdentifier: 
-  name: Dragon III and Ariane 5
+  skinName: DragonAndAriane
   scoreForUnlock: 1800
   isUnlocked: 0
   model: {fileID: 919132149155446097, guid: b4a1d5325fd2148ad95249ecff5669ce, type: 3}

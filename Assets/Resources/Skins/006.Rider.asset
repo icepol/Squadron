@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f33ec95f768014376aad791a34533b06, type: 3}
   m_Name: 006.Rider
   m_EditorClassIdentifier: 
-  name: Rider
+  skinName: Rider
   scoreForUnlock: 1000
   isUnlocked: 0
   model: {fileID: 919132149155446097, guid: 35b879bfe69124b14830a846deab579d, type: 3}

@@ -5,7 +5,7 @@ public class LoadSaveScriptableObject : ScriptableObject
 {
     protected void SaveToFile(string fileName)
     {
-# if !UNITY_EDITOR || UNITY_EDITOR
+# if !UNITY_EDITOR
         string filePath = Path.Combine(Application.persistentDataPath, fileName);
 
         File.WriteAllText(filePath, JsonUtility.ToJson(this));
@@ -14,7 +14,7 @@ public class LoadSaveScriptableObject : ScriptableObject
 
     protected void LoadFromFile(string fileName)
     {
-# if !UNITY_EDITOR || UNITY_EDITOR
+# if !UNITY_EDITOR
         string filePath = Path.Combine(Application.persistentDataPath, fileName);
 
         if (!File.Exists(filePath))
