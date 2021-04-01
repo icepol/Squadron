@@ -14,9 +14,7 @@ public class EnemySquadron : MonoBehaviour
     private bool _isFollowing;
     private Transform _mostLeftElement;
     private Transform _mostRightElement;
-    
-    public float Width { get; private set; }
-    
+
     public Vector3 LeftPosition { get; private set; }
     public Vector3 RightPosition { get; private set; }
 
@@ -44,14 +42,15 @@ public class EnemySquadron : MonoBehaviour
     {
         // called after the squadron is on the right position
         
-        CalculateWidth();
+        CalculatePositions();
         AddGate();
         AddEnemy();
+        AddCity();
         
         _followings = GetComponentsInChildren<IFollowing>();
     }
 
-    private void CalculateWidth()
+    private void CalculatePositions()
     {
         float minX = _enemies[0].transform.position.x;
         float maxX = minX;
@@ -72,8 +71,6 @@ public class EnemySquadron : MonoBehaviour
                 _mostRightElement = enemy.transform;
             }
         }
-
-        Width = maxX - minX;
     }
 
     public void StorePositions()
@@ -112,6 +109,31 @@ public class EnemySquadron : MonoBehaviour
                 
                 _enemies[enemyOffset] = Instantiate(enemyToSpawn, position, Quaternion.identity, transform);
             }
+        }
+    }
+
+    private void AddCity()
+    {
+        if (GameState.SpawnedSquadronsCount < GameManager.Instance.GameSetup.minSquadronCountToSpawnCities) return;
+        
+        if (Random.Range(0f, 1f) < GameManager.Instance.GameSetup.CurrentLevel.enemyCityRatio)
+        {
+            Vector3 position;
+            
+            if (Random.Range(0f, 1f) >= 0.5f)
+            {
+                position  = _mostLeftElement.position + Vector3.left * 4;
+            }
+            else
+            {
+                position  = _mostRightElement.position + Vector3.right * 4;
+            }
+
+            EnemyCity cityToSpawn =
+                GameManager.Instance.GameSetup.CurrentLevel.enemyCities[
+                    Random.Range(0, GameManager.Instance.GameSetup.CurrentLevel.enemyCities.Length)];
+
+            Instantiate(cityToSpawn, position, Quaternion.identity, transform);
         }
     }
 

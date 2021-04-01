@@ -9,4 +9,7 @@ public class LevelSetup : ScriptableObject
 
     public EnemySquadron[] enemySquadrons;
     public Enemy[] enemies;
+
+    public EnemyCity[] enemyCities;
+    public float enemyCityRatio;
 }

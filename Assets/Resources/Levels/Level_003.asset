@@ -22,3 +22,6 @@ MonoBehaviour:
   enemies:
   - {fileID: 4224499230387032097, guid: b2f2e686bad6d4ac5b780a7618398a24, type: 3}
   - {fileID: 4224499230387032097, guid: ff6cbcb36fa094d57a8b6f6956b999ef, type: 3}
+  enemyCities:
+  - {fileID: 7726436910584377971, guid: f85a4ab34637d431287f799ff4f99f60, type: 3}
+  enemyCityRatio: 0.3

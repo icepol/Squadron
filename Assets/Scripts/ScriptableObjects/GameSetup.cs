@@ -37,6 +37,7 @@ public class GameSetup : LoadSaveScriptableObject, IResetBeforeBuild
     [Header("Spawn Settings")]
     public int minSpawnedSquadrons;
     public int minSquadronCountToSpawnEnemies = 5;
+    public int minSquadronCountToSpawnCities = 10;
 
     [Header("Levels Settings")]
     public LevelSetup[] levels;
