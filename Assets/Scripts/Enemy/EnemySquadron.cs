@@ -96,45 +96,43 @@ public class EnemySquadron : MonoBehaviour
         
         for (int i = 0; i < GameManager.Instance.GameSetup.CurrentLevel.enemiesInSquadron; i++)
         {
-            if (Random.Range(0f, 1f) < GameManager.Instance.GameSetup.CurrentLevel.enemyRatio)
-            {
-                int enemyOffset = Random.Range(0, _enemies.Count);
-                Vector3 position = _enemies[enemyOffset].transform.position;
+            if (!(Random.Range(0f, 1f) < GameManager.Instance.GameSetup.CurrentLevel.enemyRatio)) continue;
+            
+            int enemyOffset = Random.Range(0, _enemies.Count);
+            Vector3 position = _enemies[enemyOffset].transform.position;
                 
-                Destroy(_enemies[enemyOffset].gameObject);
+            Destroy(_enemies[enemyOffset].gameObject);
 
-                Enemy enemyToSpawn =
-                    GameManager.Instance.GameSetup.CurrentLevel.enemies[
-                        Random.Range(0, GameManager.Instance.GameSetup.CurrentLevel.enemies.Length)];
+            Enemy enemyToSpawn =
+                GameManager.Instance.GameSetup.CurrentLevel.enemies[
+                    Random.Range(0, GameManager.Instance.GameSetup.CurrentLevel.enemies.Length)];
                 
-                _enemies[enemyOffset] = Instantiate(enemyToSpawn, position, Quaternion.identity, transform);
-            }
+            _enemies[enemyOffset] = Instantiate(enemyToSpawn, position, Quaternion.identity, transform);
         }
     }
 
     private void AddCity()
     {
         if (GameState.SpawnedSquadronsCount < GameManager.Instance.GameSetup.minSquadronCountToSpawnCities) return;
+
+        if (!(Random.Range(0f, 1f) < GameManager.Instance.GameSetup.CurrentLevel.enemyCityRatio)) return;
         
-        if (Random.Range(0f, 1f) < GameManager.Instance.GameSetup.CurrentLevel.enemyCityRatio)
-        {
-            Vector3 position;
+        Vector3 position;
             
-            if (Random.Range(0f, 1f) >= 0.5f)
-            {
-                position  = _mostLeftElement.position + Vector3.left * 4;
-            }
-            else
-            {
-                position  = _mostRightElement.position + Vector3.right * 4;
-            }
-
-            EnemyCity cityToSpawn =
-                GameManager.Instance.GameSetup.CurrentLevel.enemyCities[
-                    Random.Range(0, GameManager.Instance.GameSetup.CurrentLevel.enemyCities.Length)];
-
-            Instantiate(cityToSpawn, position, Quaternion.identity, transform);
+        if (Random.Range(0f, 1f) >= 0.5f)
+        {
+            position  = _mostLeftElement.position + Vector3.left * 4;
         }
+        else
+        {
+            position  = _mostRightElement.position + Vector3.right * 4;
+        }
+
+        EnemyCity cityToSpawn =
+            GameManager.Instance.GameSetup.CurrentLevel.enemyCities[
+                Random.Range(0, GameManager.Instance.GameSetup.CurrentLevel.enemyCities.Length)];
+
+        Instantiate(cityToSpawn, position, Quaternion.identity, transform);
     }
 
     public void Remove()

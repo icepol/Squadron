@@ -1377,7 +1377,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 386205529, guid: cdca6c935a7e54592b7766ff7175eaad, type: 3}
       propertyPath: isGlobal
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 386205530, guid: cdca6c935a7e54592b7766ff7175eaad, type: 3}
       propertyPath: volumeLayer.m_Bits
@@ -1549,5 +1549,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3772751199110392715, guid: 46370c7f075814ce5b4a80461e852efe, type: 3}
+      propertyPath: gameSetup
+      value: 
+      objectReference: {fileID: 11400000, guid: c46e4d4ab83a744d396617513fc4563a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46370c7f075814ce5b4a80461e852efe, type: 3}
