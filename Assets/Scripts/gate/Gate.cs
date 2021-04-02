@@ -68,9 +68,8 @@ public class Gate : MonoBehaviour, ICollisionHandler, IFollowing
     private void ShowScore(int score, Vector3 gatePassPosition)
     {
         Vector3 scoreBalloonPosition = gatePassPosition;
-        scoreBalloonPosition.z += 2;
-        // scoreBalloonPosition.y += 1;
-        
+        scoreBalloonPosition.z += 3;
+
         ScoreBalloon scoreBalloon = Instantiate(scoreBalloonPrefab, scoreBalloonPosition, Quaternion.identity);
         scoreBalloon.SetScore(score);
     }
