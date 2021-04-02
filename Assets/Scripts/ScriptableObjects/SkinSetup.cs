@@ -20,7 +20,8 @@ public class SkinSetup : LoadSaveScriptableObject
         {
             isUnlocked = value;
             
-            SaveToFile($"{FILENAME_PREFIX}{skinName.ToLower()}{FILENAME_POSTFIX}");
+            if (isPersistent)
+                SaveToFile($"{FILENAME_PREFIX}{skinName.ToLower()}{FILENAME_POSTFIX}");
         }
     }
     
@@ -33,6 +34,7 @@ public class SkinSetup : LoadSaveScriptableObject
     
     [Header("Build setup")]
     public bool isProduction;
+    public bool isPersistent;
 
     private void OnEnable()
     {
@@ -62,7 +64,8 @@ public class SkinSetup : LoadSaveScriptableObject
     
     public void LoadFromFile()
     {
-        LoadFromFile($"{FILENAME_PREFIX}{skinName.ToLower()}{FILENAME_POSTFIX}");
+        if (isPersistent)
+            LoadFromFile($"{FILENAME_PREFIX}{skinName.ToLower()}{FILENAME_POSTFIX}");
     }
 
     public void ResetBeforeBuild()
