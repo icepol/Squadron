@@ -9,7 +9,8 @@ public class PlayerController : MonoBehaviour
     private Vector3 _startRocketPosition;
     private Vector3 _startMousePosition;
     private float _controllerHeight;
-    
+
+    private bool _isEnabled = true;
     private bool _isGameRunning;
     private bool _isMoving;
     private bool _isReturning;
@@ -21,6 +22,12 @@ public class PlayerController : MonoBehaviour
         _playerRocket = GetComponentInChildren<PlayerRocket>();
     }
 
+    private void OnEnable()
+    {
+        EventManager.AddListener(Events.PANEL_SHOW, OnPanelShow);
+        EventManager.AddListener(Events.PANEL_HIDE, OnPanelHide);
+    }
+
     private void Start()
     {
         _controllerHeight = Screen.height / 3f;
@@ -30,9 +37,27 @@ public class PlayerController : MonoBehaviour
     {
         MovePlayerRocker();
     }
-    
+
+    private void OnDisable()
+    {
+        EventManager.RemoveListener(Events.PANEL_SHOW, OnPanelShow);
+        EventManager.RemoveListener(Events.PANEL_HIDE, OnPanelHide);
+    }
+
+    private void OnPanelShow()
+    {
+        _isEnabled = false;
+    }
+
+    private void OnPanelHide()
+    {
+        _isEnabled = true;
+    }
+
     private void MovePlayerRocker()
     {
+        if (!_isEnabled) return;
+        
         if (Input.GetMouseButtonDown(0) && Input.mousePosition.y < _controllerHeight)
         {
             if (!_isGameRunning)

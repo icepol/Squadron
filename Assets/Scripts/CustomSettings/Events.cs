@@ -26,5 +26,7 @@
         // settings events
         public const string MUSIC_SETTINGS_CHANGED = "MusicSettingsChanged";
         public const string PURCHASE_FINISHED = "PurchaseFinished";
+        public const string PANEL_SHOW = "PanelVisible";
+        public const string PANEL_HIDE = "PanelHide";
     }
 }

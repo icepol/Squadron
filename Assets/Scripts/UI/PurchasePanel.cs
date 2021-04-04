@@ -22,16 +22,22 @@ public class PurchasePanel : MonoBehaviour
 
     private void OnPurchaseFinished()
     {
-        purchaseInProgressPanel.SetActive(false);        
+        purchaseInProgressPanel.SetActive(false);
+
+        EventManager.TriggerEvent(Events.PANEL_HIDE);
     }
 
     public void OnUnlockAllSkinsButtonClick()
     {
         purchaseInProgressPanel.SetActive(true);
+        
+        EventManager.TriggerEvent(Events.PANEL_SHOW);
     }
 
     public void OnRestorePurchasesButtonClick()
     {
         purchaseInProgressPanel.SetActive(true);
+        
+        EventManager.TriggerEvent(Events.PANEL_SHOW);
     }
 }
