@@ -28,6 +28,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 32045a9c42f7c472eb7bbd9cf03a4bdf, type: 2}
   minSpawnedSquadrons: 10
   minSquadronCountToSpawnEnemies: 5
+  minSquadronCountToSpawnCities: 10
   levels:
   - {fileID: 11400000, guid: 1a3e73567dab44c5c9b573e93fa7b61c, type: 2}
   - {fileID: 11400000, guid: dc6ebb947a3d34fbf8499d2103e3020f, type: 2}
