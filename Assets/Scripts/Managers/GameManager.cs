@@ -84,8 +84,8 @@ public class GameManager : MonoBehaviour
         
         GameServices.ReportScore(Constants.TopScoreLeaderBoardId, GameState.Score);
         GameServices.ReportScore(Constants.TopDistanceReachedId, GameState.Distance);
-        GameServices.ReportScore(Constants.TopCitiesDestroyedId, GameState.CitiesDestroyed);
-        GameServices.ReportScore(Constants.TopEnemiesDestroyedId, GameState.EnemiesDestroyed);
+        GameServices.ReportScore(Constants.TopCitiesDestroyerId, GameState.CitiesDestroyed);
+        GameServices.ReportScore(Constants.TopEnemiesDestroyerId, GameState.EnemiesDestroyed);
 
         StartCoroutine(WaitAndRestart());
     }

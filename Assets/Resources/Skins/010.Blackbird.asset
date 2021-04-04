@@ -17,6 +17,6 @@ MonoBehaviour:
   isUnlocked: 0
   model: {fileID: 919132149155446097, guid: a45077eed30ec4c08b346630e705feef, type: 3}
   achievementIdAndroid: 
-  achievementIdIos: 
+  achievementIdIos: squadron_skin_blackbird
   isProduction: 1
   isPersistent: 1

@@ -19,3 +19,4 @@ MonoBehaviour:
   achievementIdAndroid: 
   achievementIdIos: 
   isProduction: 0
+  isPersistent: 0
