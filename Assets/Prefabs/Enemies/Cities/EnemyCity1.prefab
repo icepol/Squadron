@@ -98,6 +98,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d91a5350ff74490fa1438b071a737d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosion: {fileID: 306484354556389829, guid: ea7055e798b094fecb8bb33f854588dd, type: 3}
+  scoreBalloonPrefab: {fileID: 2850586209554490029, guid: 39bac985d31424f899a90b2703ca1554, type: 3}
+  destroyAfterCollision: 0
+  destroyScore: 25
 --- !u!1 &2042186038826795332
 GameObject:
   m_ObjectHideFlags: 0

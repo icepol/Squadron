@@ -5,6 +5,8 @@ public class Gate : MonoBehaviour, ICollisionHandler, IFollowing
 {
     [SerializeField] private ParticleSystem gatePass;
     [SerializeField] private ScoreBalloon scoreBalloonPrefab;
+    [SerializeField] private int cleanPassScore = 10;
+    [SerializeField] private int dirtyPassScore = 1;
 
     private GateBorders _gateBorders;
     private bool _isFollowing;
@@ -48,7 +50,7 @@ public class Gate : MonoBehaviour, ICollisionHandler, IFollowing
         
         GameState.ComboMultiplier++;
 
-        int score = 10 * GameState.ComboMultiplier;
+        int score = cleanPassScore * GameState.ComboMultiplier;
         
         GameState.Score += score;
         
@@ -62,7 +64,7 @@ public class Gate : MonoBehaviour, ICollisionHandler, IFollowing
         GameState.Score++;
         GameState.ComboMultiplier = 0;
         
-        ShowScore(1, gatePassPosition);
+        ShowScore(dirtyPassScore, gatePassPosition);
     }
 
     private void ShowScore(int score, Vector3 gatePassPosition)

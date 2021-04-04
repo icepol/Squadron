@@ -147,19 +147,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d91a5350ff74490fa1438b071a737d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1502046418644028978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5659708340259190311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 005a987675d4f43d19f37bbcf59cf169, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collisionHandlers: []
+  explosion: {fileID: 306484354556389829, guid: ea7055e798b094fecb8bb33f854588dd, type: 3}
+  scoreBalloonPrefab: {fileID: 2850586209554490029, guid: 39bac985d31424f899a90b2703ca1554, type: 3}
+  destroyAfterCollision: 0
+  destroyScore: 25
 --- !u!64 &3961509330684648757
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -174,6 +165,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4711208715938537054, guid: f96f366f6ff5b4196a9cc9fedffc7816, type: 3}
+--- !u!114 &1502046418644028978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5659708340259190311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 005a987675d4f43d19f37bbcf59cf169, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionHandlers: []
 --- !u!1001 &4776695699041143670
 PrefabInstance:
   m_ObjectHideFlags: 0

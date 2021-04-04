@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9ed62a4558d845689dc185f5ba8e587, type: 3}
   m_Name: GameSetup
   m_EditorClassIdentifier: 
-  selectedSkinIndex: 0
+  selectedSkinIndex: 3
   areUnlockedAll: 0
   skins:
   - {fileID: 11400000, guid: 3e02e395bd84a45108eb9f51650186f9, type: 2}

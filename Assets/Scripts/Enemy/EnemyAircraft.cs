@@ -2,10 +2,9 @@ using System;
 using pixelook;
 using UnityEngine;
 
-public class EnemyAircraft : MonoBehaviour, IFollowing
+public class EnemyAircraft : MonoBehaviour, IFollowing, ICollisionHandler
 {
     [SerializeField] private ParticleSystem engineDust;
-    [SerializeField] private ParticleSystem explosion;
 
     [SerializeField] private bool isTriggeredByDistance;
     [SerializeField] private float triggerDistance;
@@ -53,6 +52,15 @@ public class EnemyAircraft : MonoBehaviour, IFollowing
     private void OnDisable()
     {
         EventManager.AddListener(Events.PLAYER_POSITION_CHANGED, OnPlayerPositionChanged);
+    }
+    
+    public void OnTriggerEnter(Collider other)
+    {
+        Player player = other.GetComponentInParent<Player>();
+        
+        if (player == null) return;
+
+        GameState.EnemiesDestroyed++;
     }
 
     private void OnPlayerPositionChanged(Vector3 playerPosition)

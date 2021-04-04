@@ -16,6 +16,10 @@
         }
         
         public static int Distance { get; set; }
+        
+        public static int CitiesDestroyed { get; set; }
+        
+        public static int EnemiesDestroyed { get; set; }
 
         public static int ComboMultiplier
         {
@@ -41,6 +45,8 @@
             // reset the state before the game started
             _score = 0;
             Distance = 0;
+            CitiesDestroyed = 0;
+            EnemiesDestroyed = 0;
             ComboMultiplier = 0;
         }
     }
