@@ -18,8 +18,8 @@ public class GameManager : MonoBehaviour
         Instance = this;
 
         GameState.OnApplicationStarted();
-        
-        GameSetup.LoadFromFile();
+
+        LoadFromFile();
     }
 
     private void OnEnable()
@@ -41,6 +41,27 @@ public class GameManager : MonoBehaviour
         EventManager.RemoveListener(Events.GAME_STARTED, OnGameStarted);
         EventManager.RemoveListener(Events.LEVEL_CHANGED, OnLevelChanged);
         EventManager.RemoveListener(Events.PLAYER_DIED, OnPlayerDied);
+    }
+    
+    private void LoadFromFile()
+    {
+        GameSetup loadedGameSetup = ScriptableObject.CreateInstance<GameSetup>();
+        loadedGameSetup.LoadFromFile();
+
+        GameSetup.areUnlockedAll = loadedGameSetup.areUnlockedAll;
+        GameSetup.selectedSkinIndex = loadedGameSetup.selectedSkinIndex;
+
+        SkinSetup loadedSkinSetup = ScriptableObject.CreateInstance<SkinSetup>();
+
+        foreach (SkinSetup skinSetup in GameSetup.skins)
+        {
+            if (!skinSetup.isPersistent) continue;
+            
+            loadedSkinSetup.skinName = skinSetup.skinName;
+            loadedSkinSetup.LoadFromFile();
+
+            skinSetup.IsUnlocked = loadedSkinSetup.IsUnlocked;
+        }
     }
 
     private void OnPlayerJumpStarted()

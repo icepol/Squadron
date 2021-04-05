@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private float referenceWidth = 1242f;
     [SerializeField] private float mouseSensitivity = 3f;
  
     private Vector3 _startRocketPosition;
     private Vector3 _startMousePosition;
     private float _controllerHeight;
+    private float _mouseSensitivity;
 
     private bool _isEnabled = true;
     private bool _isGameRunning;
@@ -31,6 +33,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         _controllerHeight = Screen.height / 3f;
+        _mouseSensitivity = (Screen.width / referenceWidth) * mouseSensitivity;
     }
 
     void Update()
@@ -80,7 +83,7 @@ public class PlayerController : MonoBehaviour
         else if (Input.GetMouseButton(0) && _isMoving)
         {
             _playerRocket.MoveToPosition(_startRocketPosition.x +
-                                         (Input.mousePosition.x - _startMousePosition.x) / Screen.width * mouseSensitivity);
+                                         (Input.mousePosition.x - _startMousePosition.x) / Screen.width * _mouseSensitivity);
         }
         else if (_isGameRunning && _isReturning)
         {

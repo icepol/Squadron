@@ -48,11 +48,6 @@ public class GameSetup : LoadSaveScriptableObject, IResetBeforeBuild
     public void LoadFromFile()
     {
         LoadFromFile(FILENAME);
-
-        foreach (SkinSetup skinSetup in skins)
-        {
-            skinSetup.LoadFromFile();
-        }
     }
 
     public void ResetBeforeBuild()

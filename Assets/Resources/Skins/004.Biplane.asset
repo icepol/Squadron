@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skinName: Biplane
   scoreForUnlock: 500
-  isUnlocked: 1
+  isUnlocked: 0
   model: {fileID: 919132149155446097, guid: 9c127b5541b47499eb0cddc6bd63e24c, type: 3}
   achievementIdAndroid: 
   achievementIdIos: squadron_skin_biplane

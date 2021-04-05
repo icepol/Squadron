@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skinName: Rider
   scoreForUnlock: 1000
-  isUnlocked: 1
+  isUnlocked: 0
   model: {fileID: 919132149155446097, guid: 35b879bfe69124b14830a846deab579d, type: 3}
   achievementIdAndroid: 
   achievementIdIos: squadron_skin_rider

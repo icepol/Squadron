@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skinName: XWing
   scoreForUnlock: 150
-  isUnlocked: 1
+  isUnlocked: 0
   model: {fileID: 919132149155446097, guid: 6938a3bb7d798473ba91b9b1a521dc15, type: 3}
   achievementIdAndroid: 
   achievementIdIos: squadron_skin_xwing

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skinName: Sputnik
   scoreForUnlock: 750
-  isUnlocked: 1
+  isUnlocked: 0
   model: {fileID: 919132149155446097, guid: 5581829437340407580d60df3042fbfc, type: 3}
   achievementIdAndroid: 
   achievementIdIos: squadron_skin_sputnik
