@@ -58,10 +58,14 @@ public class GameManager : MonoBehaviour
             if (!skinSetup.isPersistent) continue;
             
             loadedSkinSetup.skinName = skinSetup.skinName;
+            loadedSkinSetup.isPersistent = skinSetup.isPersistent;
             loadedSkinSetup.LoadFromFile();
 
             skinSetup.IsUnlocked = loadedSkinSetup.IsUnlocked;
         }
+        
+        Destroy(loadedSkinSetup);
+        Destroy(loadedGameSetup);
     }
 
     private void OnPlayerJumpStarted()
