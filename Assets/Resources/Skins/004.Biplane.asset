@@ -16,7 +16,7 @@ MonoBehaviour:
   scoreForUnlock: 500
   isUnlocked: 0
   model: {fileID: 919132149155446097, guid: 9c127b5541b47499eb0cddc6bd63e24c, type: 3}
-  achievementIdAndroid: 
+  achievementIdAndroid: CgkIsKPEu_0MEAIQAw
   achievementIdIos: squadron_skin_biplane
   isProduction: 1
   isPersistent: 1

@@ -16,7 +16,7 @@ MonoBehaviour:
   scoreForUnlock: 3300
   isUnlocked: 0
   model: {fileID: 919132149155446097, guid: b7d2c60546322425186b7fc8d34f1bb2, type: 3}
-  achievementIdAndroid: 
+  achievementIdAndroid: CgkIsKPEu_0MEAIQCg
   achievementIdIos: squadron_skin_heavycruiser
   isProduction: 1
   isPersistent: 1

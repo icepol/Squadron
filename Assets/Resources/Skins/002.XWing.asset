@@ -16,7 +16,7 @@ MonoBehaviour:
   scoreForUnlock: 150
   isUnlocked: 0
   model: {fileID: 919132149155446097, guid: 6938a3bb7d798473ba91b9b1a521dc15, type: 3}
-  achievementIdAndroid: 
+  achievementIdAndroid: CgkIsKPEu_0MEAIQAQ
   achievementIdIos: squadron_skin_xwing
   isProduction: 1
   isPersistent: 1

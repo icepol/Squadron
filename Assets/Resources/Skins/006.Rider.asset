@@ -16,7 +16,7 @@ MonoBehaviour:
   scoreForUnlock: 1000
   isUnlocked: 0
   model: {fileID: 919132149155446097, guid: 35b879bfe69124b14830a846deab579d, type: 3}
-  achievementIdAndroid: 
+  achievementIdAndroid: CgkIsKPEu_0MEAIQBQ
   achievementIdIos: squadron_skin_rider
   isProduction: 1
   isPersistent: 1

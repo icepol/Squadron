@@ -16,7 +16,7 @@ MonoBehaviour:
   scoreForUnlock: 1800
   isUnlocked: 0
   model: {fileID: 919132149155446097, guid: b4a1d5325fd2148ad95249ecff5669ce, type: 3}
-  achievementIdAndroid: 
+  achievementIdAndroid: CgkIsKPEu_0MEAIQBw
   achievementIdIos: squadron_skin_dragonandariane
   isProduction: 1
   isPersistent: 1

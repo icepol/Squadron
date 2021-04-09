@@ -16,7 +16,7 @@ MonoBehaviour:
   scoreForUnlock: 2300
   isUnlocked: 0
   model: {fileID: 919132149155446097, guid: db58c88b8694945d3ba3c829dae8c400, type: 3}
-  achievementIdAndroid: 
+  achievementIdAndroid: CgkIsKPEu_0MEAIQCA
   achievementIdIos: squadron_skin_starcruiser
   isProduction: 1
   isPersistent: 1

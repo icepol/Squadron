@@ -16,7 +16,7 @@ MonoBehaviour:
   scoreForUnlock: 750
   isUnlocked: 0
   model: {fileID: 919132149155446097, guid: 5581829437340407580d60df3042fbfc, type: 3}
-  achievementIdAndroid: 
+  achievementIdAndroid: CgkIsKPEu_0MEAIQBA
   achievementIdIos: squadron_skin_sputnik
   isProduction: 1
   isPersistent: 1

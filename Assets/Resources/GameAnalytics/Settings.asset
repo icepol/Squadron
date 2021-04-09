@@ -27,20 +27,26 @@ MonoBehaviour:
   CustomArea: 
   gameKey:
   - 3c314e7b27c3b4df7fbcfda5673f8895
+  - 9e0d15206acb9fa16d76acc94752c300
   secretKey:
   - 3e6e16c0b2ca57a1b11516d2d6479251f268fe0d
+  - 6bf8d05f044a8013269a30209958b1d237ee2037
   Build:
+  - 0.1
   - 0.1
   SelectedPlatformOrganization:
   - 
+  - pixelook
   SelectedPlatformStudio:
   - 
+  - pixelook
   SelectedPlatformGame:
   - 
-  SelectedPlatformGameID: ccee0100
-  SelectedOrganization: 01000000
-  SelectedStudio: 01000000
-  SelectedGame: 06000000
+  - Squadron Android
+  SelectedPlatformGameID: ccee0100041e0200
+  SelectedOrganization: 0100000001000000
+  SelectedStudio: 0100000001000000
+  SelectedGame: 0600000003000000
   NewVersion: 6.4.1
   Changes: '6.4.1
 
@@ -101,7 +107,7 @@ MonoBehaviour:
   EmailGA: pavel.koci@icepol.net
   IntroScreen: 0
   InfoLogEditor: 1
-  InfoLogBuild: 1
+  InfoLogBuild: 0
   VerboseLogBuild: 0
   UseManualSessionHandling: 0
   SendExampleGameDataToMyGame: 0
@@ -113,7 +119,7 @@ MonoBehaviour:
   ResourceItemTypes: []
   ResourceCurrencies: []
   LastCreatedGamePlatform: 1
-  Platforms: 08000000
+  Platforms: 080000000b000000
   CurrentInspectorState: 1
   ClosedHints: 
   DisplayHints: 0
@@ -140,7 +146,7 @@ MonoBehaviour:
   IncludeGooglePlay: 1
   FpsCriticalThreshold: 20
   FpsCirticalSubmitInterval: 1
-  PlatformFoldOut: 01
+  PlatformFoldOut: 0101
   CustomDimensions01FoldOut: 0
   CustomDimensions02FoldOut: 0
   CustomDimensions03FoldOut: 0
