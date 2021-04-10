@@ -1,4 +1,5 @@
 #if UNITY_PURCHASING || UNITY_UNIFIED_IAP
+using System;
 using UnityEngine.Events;
 using UnityEngine.UI;
 using System.IO;

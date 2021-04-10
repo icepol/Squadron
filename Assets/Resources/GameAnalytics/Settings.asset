@@ -28,25 +28,31 @@ MonoBehaviour:
   gameKey:
   - 3c314e7b27c3b4df7fbcfda5673f8895
   - 9e0d15206acb9fa16d76acc94752c300
+  - 0b0e50a7c16f00b06eb165a662a09a6b
   secretKey:
   - 3e6e16c0b2ca57a1b11516d2d6479251f268fe0d
   - 6bf8d05f044a8013269a30209958b1d237ee2037
+  - 037a7cbf2a2107435020a09ef7ef1d8ddffa40f9
   Build:
+  - 0.1
   - 0.1
   - 0.1
   SelectedPlatformOrganization:
   - 
   - pixelook
+  - pixelook
   SelectedPlatformStudio:
   - 
+  - pixelook
   - pixelook
   SelectedPlatformGame:
   - 
   - Squadron Android
-  SelectedPlatformGameID: ccee0100041e0200
-  SelectedOrganization: 0100000001000000
-  SelectedStudio: 0100000001000000
-  SelectedGame: 0600000003000000
+  - Squadron WebGL
+  SelectedPlatformGameID: ccee0100041e02005d1e0200
+  SelectedOrganization: 010000000100000001000000
+  SelectedStudio: 010000000100000001000000
+  SelectedGame: 060000000300000009000000
   NewVersion: 6.4.1
   Changes: '6.4.1
 
@@ -119,7 +125,7 @@ MonoBehaviour:
   ResourceItemTypes: []
   ResourceCurrencies: []
   LastCreatedGamePlatform: 1
-  Platforms: 080000000b000000
+  Platforms: 080000000b00000011000000
   CurrentInspectorState: 1
   ClosedHints: 
   DisplayHints: 0
@@ -146,7 +152,7 @@ MonoBehaviour:
   IncludeGooglePlay: 1
   FpsCriticalThreshold: 20
   FpsCirticalSubmitInterval: 1
-  PlatformFoldOut: 0101
+  PlatformFoldOut: 010101
   CustomDimensions01FoldOut: 0
   CustomDimensions02FoldOut: 0
   CustomDimensions03FoldOut: 0
